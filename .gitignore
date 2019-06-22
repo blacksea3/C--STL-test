@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+
+# VS temp data directory?
+STLexamples/.vs
+STLexamples/STLexamples/Debug
+STLexamples/STLexamples/x64/Debug
+STLexamples/Debug
+STLexamples/x64/Debug
