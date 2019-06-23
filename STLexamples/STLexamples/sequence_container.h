@@ -6,3 +6,5 @@ void insert_test();
 void delete_test();
 void mvector();
 void mvector_sort();
+void mvector_other();
+

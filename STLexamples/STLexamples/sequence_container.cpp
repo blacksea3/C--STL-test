@@ -1,5 +1,14 @@
 #include "pch.h"
 
+/*
+序列式容器
+vector：     动态数组；允许随机访问，读取/修改快；最后插入很快，越往前，插入操作越慢，删除同理；插入操作或将引起大小再分配，内存的移动，但出现次数不多。
+deque：     双向动态数组，几乎与vector相同；除了：头尾插入很快，中间插入慢，删除同理。
+array：       静态数组；允许随机访问，读取/修改快，不支持插入/删除。
+list：          双向链表；不允许随机访问，读取/修改慢；任意位置插入删除快。
+forward_list： 单向链表，功能受限，特殊/暂不研究
+*/
+
 void init_test()
 {
 	clock_t startTime, endTime;
@@ -459,11 +468,12 @@ void mvector_sort()
 	cout << endl << endl;
 
 	vector<int> v13 = { 1,6,8,20,3,41,5,-32,6 };
-	cout << "vector<int> v13 = { 1,6,8,20,3,41,5,-32,6 }; sort(v12.begin(), v12.end(), m_cmp2);"<< endl;
+	cout << "vector<int> v13 = { 1,6,8,20,3,41,5,-32,6 }; sort(v13.begin(), v13.end(), m_cmp2);"<< endl;
 	sort(v13.begin(), v13.end(), m_cmp2);
 	for (auto v : v13) cout << v << " ";
 	cout << endl << endl;
 
+	cout << "vector<pair<int,int>> v14, 按先first后second非递增排序" << endl;
 	vector<pair<int, int>> v14;
 	v14.push_back(pair<int, int> {1, 20});
 	v14.push_back(pair<int, int> {10, 2});
@@ -474,5 +484,51 @@ void mvector_sort()
 	sort(v14.begin(), v14.end(), m_cmp);
 	for (auto v : v14) cout << v.first << " " << v.second << " ";
 	cout << endl << endl;
+}
 
+void mvector_other()
+{
+	//遍历删除
+	cout << "遍历删除" << endl;
+	vector<int> v15 = { 1,4,1,1,4,1,1,1,1,4,4,1 };
+	for (auto v : v15) cout << v << " ";
+	cout << endl << endl;
+	vector<int>::iterator iterv15;
+	for (iterv15 = v15.begin(); iterv15 != v15.end();)
+	{
+		if (*iterv15 == 1)
+			iterv15 = v15.erase(iterv15);
+		else
+			iterv15++;
+	}
+	for (auto v : v15) cout << v << " ";
+	cout << endl << endl;
+
+	//遍历添加
+	cout << "遍历添加" << endl;
+	vector<int> v16 = { 1,4,1,1,4,1,1,1,1,4,4,1 };
+	for (auto v : v16) cout << v << " ";
+	cout << endl << endl;
+	vector<int>::iterator iterv16;
+	for (iterv16 = v16.begin(); iterv16 != v16.end();)
+	{
+		if (*iterv16 == 4)
+		{
+			iterv16 = v16.insert(iterv16, 5);
+			iterv16 += 2;
+		}
+		else
+			iterv16++;
+	}
+	for (auto v : v16) cout << v << " ";
+	cout << endl << endl;
+
+	//reverse
+	cout << "reverse(v17.begin(), v17.end());" << endl;
+	vector<int> v17 = { 1,4,6,0,15,22,-331,41,69 };
+	for (auto v : v17) cout << v << " ";
+	cout << endl << endl;
+	reverse(v17.begin(), v17.end());
+	for (auto v : v17) cout << v << " ";
+	cout << endl << endl;
 }

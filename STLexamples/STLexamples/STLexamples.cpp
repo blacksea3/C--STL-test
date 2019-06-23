@@ -11,7 +11,7 @@ int main()
 	//insert_test();
 	//delete_test();
 	//mvector();
-	mvector_sort();
-
+	//mvector_sort();
+	mvector_other();
 	return 0;
 }
