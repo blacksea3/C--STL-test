@@ -4,6 +4,7 @@
 #include "pch.h"
 #include "sequence_container.h"
 
+/*
 int main()
 {
 	//sequence_container
@@ -12,6 +13,7 @@ int main()
 	//delete_test();
 	//mvector();
 	//mvector_sort();
-	mvector_other();
+	//mvector_other();
 	return 0;
 }
+*/

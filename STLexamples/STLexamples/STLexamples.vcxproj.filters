@@ -18,18 +18,12 @@
     <ClInclude Include="pch.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="sequence_container.h">
+    <ClInclude Include="cppstdlib-code\algo\algostuff.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="STLexamples.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="sequence_container.cpp">
+    <ClCompile Include="cppstdlib-code\algo\accumulate1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
