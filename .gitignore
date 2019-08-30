@@ -37,3 +37,10 @@ STLexamples/STLexamples/Debug
 STLexamples/STLexamples/x64/Debug
 STLexamples/Debug
 STLexamples/x64/Debug
+
+other/.vs
+other/Cppprimerplus/.vs
+other/Cppprimerplus/Debug
+other/Cppprimerplus/x64/Debug
+other/Debug
+other/x64/Debug
