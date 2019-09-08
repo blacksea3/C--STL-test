@@ -30,6 +30,18 @@
     <ClInclude Include="Sales.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="mStack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Move.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Plorg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cppprimerplus.cpp">
@@ -48,6 +60,18 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Sales.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mStack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Move.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Plorg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

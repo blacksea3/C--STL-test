@@ -153,7 +153,11 @@
   <ItemGroup>
     <ClInclude Include="BandAccount.h" />
     <ClInclude Include="Golf.h" />
+    <ClInclude Include="mList.h" />
+    <ClInclude Include="Move.h" />
+    <ClInclude Include="mStack.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="Plorg.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Sales.h" />
   </ItemGroup>
@@ -162,7 +166,11 @@
     <ClCompile Include="Cppprimerplus.cpp" />
     <ClCompile Include="global.h" />
     <ClCompile Include="Golf.cpp" />
+    <ClCompile Include="mList.cpp" />
+    <ClCompile Include="Move.cpp" />
+    <ClCompile Include="mStack.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Plorg.cpp" />
     <ClCompile Include="Sales.cpp" />
   </ItemGroup>
   <ItemGroup>
