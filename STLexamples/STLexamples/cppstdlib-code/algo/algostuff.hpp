@@ -27,6 +27,8 @@
 #include <iostream>
 #include <string>
 
+#include <time.h>
+
 // INSERT_ELEMENTS (collection, first, last)
 // - fill values from first to last into the collection
 // - NOTE: NO half-open range

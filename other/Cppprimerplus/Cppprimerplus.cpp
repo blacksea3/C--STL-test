@@ -10,6 +10,7 @@
 //#include "Move.h"
 //#include "Plorg.h"
 //#include "mList.h"
+#include "mString.h"
 
 int main()
 {
@@ -21,6 +22,7 @@ int main()
 	//MoveClassTest();
 	//PlorgClassTest();
 	//mListClassTest();
+	mStringClassTest();
 
 	return 0;
 }
