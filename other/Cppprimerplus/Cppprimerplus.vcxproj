@@ -153,27 +153,33 @@
   <ItemGroup>
     <ClInclude Include="BandAccount.h" />
     <ClInclude Include="Golf.h" />
+    <ClInclude Include="mComplex.h" />
     <ClInclude Include="mList.h" />
     <ClInclude Include="Move.h" />
     <ClInclude Include="mStack.h" />
+    <ClInclude Include="mTime.h" />
     <ClInclude Include="mVector.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="Plorg.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Sales.h" />
+    <ClInclude Include="Stonewt.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BandAccount.cpp" />
     <ClCompile Include="Cppprimerplus.cpp" />
     <ClCompile Include="global.h" />
     <ClCompile Include="Golf.cpp" />
+    <ClCompile Include="mComplex.cpp" />
     <ClCompile Include="mList.cpp" />
     <ClCompile Include="Move.cpp" />
     <ClCompile Include="mStack.cpp" />
+    <ClCompile Include="mTime.cpp" />
     <ClCompile Include="mVector.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="Plorg.cpp" />
     <ClCompile Include="Sales.cpp" />
+    <ClCompile Include="Stonewt.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Cppprimerplus.rc" />

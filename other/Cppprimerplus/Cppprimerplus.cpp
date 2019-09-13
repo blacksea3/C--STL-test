@@ -10,7 +10,10 @@
 //#include "Move.h"
 //#include "Plorg.h"
 //#include "mList.h"
-#include "mVector.h"
+//#include "mVector.h"
+//#include "mTime.h"
+//#include "Stonewt.h"
+#include "mComplex.h"
 
 int main()
 {
@@ -22,7 +25,10 @@ int main()
 	//MoveClassTest();
 	//PlorgClassTest();
 	//mListClassTest();
-	mVectorClassTest();
+	//mVectorClassTest();
+	//mTimeClassTest();
+	//StonewtClassTest();
+	mComplexClassTest();
 
 	return 0;
 }

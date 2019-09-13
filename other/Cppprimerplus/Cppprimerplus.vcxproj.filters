@@ -45,6 +45,15 @@
     <ClInclude Include="mVector.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="mTime.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Stonewt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mComplex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cppprimerplus.cpp">
@@ -78,6 +87,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="mVector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mTime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Stonewt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mComplex.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
