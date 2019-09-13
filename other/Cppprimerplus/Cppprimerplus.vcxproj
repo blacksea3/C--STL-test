@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BandAccount.h" />
+    <ClInclude Include="Cow.h" />
     <ClInclude Include="Golf.h" />
     <ClInclude Include="mComplex.h" />
     <ClInclude Include="mList.h" />
@@ -167,6 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BandAccount.cpp" />
+    <ClCompile Include="Cow.cpp" />
     <ClCompile Include="Cppprimerplus.cpp" />
     <ClCompile Include="global.h" />
     <ClCompile Include="Golf.cpp" />

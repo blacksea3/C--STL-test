@@ -13,7 +13,8 @@
 //#include "mVector.h"
 //#include "mTime.h"
 //#include "Stonewt.h"
-#include "mComplex.h"
+//#include "mComplex.h"
+#include "Cow.h"
 
 int main()
 {
@@ -28,7 +29,8 @@ int main()
 	//mVectorClassTest();
 	//mTimeClassTest();
 	//StonewtClassTest();
-	mComplexClassTest();
+	//mComplexClassTest();
+	CowClassTest();
 
 	return 0;
 }
