@@ -14,7 +14,8 @@
 //#include "mTime.h"
 //#include "Stonewt.h"
 //#include "mComplex.h"
-#include "Cow.h"
+//#include "Cow.h"
+#include "mString.h"
 
 int main()
 {
@@ -30,7 +31,8 @@ int main()
 	//mTimeClassTest();
 	//StonewtClassTest();
 	//mComplexClassTest();
-	CowClassTest();
+	//CowClassTest();
+	mStringClassTest();
 
 	return 0;
 }

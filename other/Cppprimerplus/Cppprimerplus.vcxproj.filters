@@ -57,6 +57,9 @@
     <ClInclude Include="Cow.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="mString.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cppprimerplus.cpp">
@@ -102,6 +105,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Cow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mString.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

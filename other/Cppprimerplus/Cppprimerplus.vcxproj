@@ -158,6 +158,7 @@
     <ClInclude Include="mList.h" />
     <ClInclude Include="Move.h" />
     <ClInclude Include="mStack.h" />
+    <ClInclude Include="mString.h" />
     <ClInclude Include="mTime.h" />
     <ClInclude Include="mVector.h" />
     <ClInclude Include="Person.h" />
@@ -176,6 +177,7 @@
     <ClCompile Include="mList.cpp" />
     <ClCompile Include="Move.cpp" />
     <ClCompile Include="mStack.cpp" />
+    <ClCompile Include="mString.cpp" />
     <ClCompile Include="mTime.cpp" />
     <ClCompile Include="mVector.cpp" />
     <ClCompile Include="Person.cpp" />
