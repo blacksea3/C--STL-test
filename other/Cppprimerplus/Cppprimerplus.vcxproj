@@ -158,6 +158,8 @@
     <ClInclude Include="mList.h" />
     <ClInclude Include="Move.h" />
     <ClInclude Include="mStack.h" />
+    <ClInclude Include="mStack2.h" />
+    <ClInclude Include="mStock.h" />
     <ClInclude Include="mString.h" />
     <ClInclude Include="mTime.h" />
     <ClInclude Include="mVector.h" />
@@ -177,6 +179,8 @@
     <ClCompile Include="mList.cpp" />
     <ClCompile Include="Move.cpp" />
     <ClCompile Include="mStack.cpp" />
+    <ClCompile Include="mStack2.cpp" />
+    <ClCompile Include="mStock.cpp" />
     <ClCompile Include="mString.cpp" />
     <ClCompile Include="mTime.cpp" />
     <ClCompile Include="mVector.cpp" />

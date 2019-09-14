@@ -15,7 +15,9 @@
 //#include "Stonewt.h"
 //#include "mComplex.h"
 //#include "Cow.h"
-#include "mString.h"
+//#include "mString.h"
+//#include "mStock.h"
+#include "mStack2.h"
 
 int main()
 {
@@ -32,7 +34,9 @@ int main()
 	//StonewtClassTest();
 	//mComplexClassTest();
 	//CowClassTest();
-	mStringClassTest();
+	//mStringClassTest();
+	//mStockClassTest();
+	mStackClasstest();
 
 	return 0;
 }

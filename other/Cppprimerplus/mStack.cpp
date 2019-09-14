@@ -74,4 +74,3 @@ void mStackClassTest()
 	cout << ms.pop(para) << endl;
 	cout << ms.pop(para) << endl;
 }
-
