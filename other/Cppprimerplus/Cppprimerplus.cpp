@@ -17,7 +17,8 @@
 //#include "Cow.h"
 //#include "mString.h"
 //#include "mStock.h"
-#include "mStack2.h"
+//#include "mStack2.h"
+#include "Cd.h"
 
 int main()
 {
@@ -36,7 +37,8 @@ int main()
 	//CowClassTest();
 	//mStringClassTest();
 	//mStockClassTest();
-	mStackClasstest();
+	//mStackClasstest();
+	CdClassTest();
 
 	return 0;
 }
