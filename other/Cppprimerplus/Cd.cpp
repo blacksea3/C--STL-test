@@ -4,33 +4,28 @@
 
 Cd::Cd(const char * s1, const char * s2, int n, double x)
 {
-	int s1Size = strlen(s1);
-	if (s1Size > 49)
-	{
-		strncpy_s(performers, 49, s1, 49);
-		performers[49] = '\0';
-	}
-	else
-	{
-		strcpy(performers, s1);
-	}
-
-	int s2Size = strlen(s2);
-	if (s2Size > 19)
-	{
-		strncpy_s(label, 19, s2, 19);
-		label[19] = '\0';
-	}
-	else
-	{
-		strcpy(label, s2);
-	}
+	performers = new char[strlen(s1) + 1];
+	strcpy(performers, s1);
+	label = new char[strlen(s2) + 1];
+	strcpy(label, s2);
 	selections = n;
 	playtime = x;
 }
 
+Cd::Cd(const Cd & d)
+{
+	performers = new char[strlen(d.performers) + 1];
+	strcpy(performers, d.performers);
+	label = new char[strlen(d.label) + 1];
+	strcpy(label, d.label);
+	selections = d.selections;
+	playtime = d.playtime;
+}
+
 Cd::Cd()
 {
+	performers = new char[1];
+	label = new char[1];
 	performers[0] = '\0';
 	label[0] = '\0';
 	selections = 0;
@@ -40,6 +35,8 @@ Cd::Cd()
 
 Cd::~Cd()
 {
+	delete[] performers;
+	delete[] label;
 }
 
 void Cd::Report() const
@@ -50,29 +47,69 @@ void Cd::Report() const
 	cout << "playtime: " << playtime << endl;
 }
 
+Cd & Cd::operator=(const Cd & d)
+{
+	if (&d == this)
+	{
+		return *this;
+	}
+	else
+	{
+		delete[] performers;
+		delete[] label;
+		performers = new char[strlen(d.performers) + 1];
+		strcpy(performers, d.performers);
+		label = new char[strlen(d.label) + 1];
+		strcpy(label, d.label);
+		selections = d.selections;
+		playtime = d.playtime;
+		return *this;
+	}
+}
+
 Classic::Classic() : Cd()
 {
+	mainWork = new char[1];
 	mainWork[0] = '\0';
 }
 
 Classic::Classic(const char* mainwork, const char * s1, const char * s2, int n, double x) : Cd(s1, s2, n, x)
 {
-	int s3Size = strlen(mainwork);
-	if (s3Size > 39)
-	{
-		strncpy_s(mainWork, 39, mainwork, 39);
-		mainWork[39] = '\0';
-	}
-	else
-	{
-		strcpy(mainWork, mainwork);
-	}
+	mainWork = new char[strlen(mainwork) + 1];
+	strcpy(mainWork, mainwork);
+}
+
+Classic::Classic(const Classic & d) : Cd(d)
+{
+	mainWork = new char[strlen(d.mainWork) + 1];
+	strcpy(mainWork, d.mainWork);
 }
 
 void Classic::Report() const
 {
 	Cd::Report();
 	cout << "mainWork: " << mainWork << endl;
+}
+
+Classic::~Classic()
+{
+	delete[] mainWork;
+}
+
+Classic & Classic::operator=(const Classic & d)
+{
+	if (&d == this)
+	{
+		return *this;
+	}
+	else
+	{
+		Cd::operator=(d);
+		delete[] mainWork;
+		mainWork = new char[strlen(d.mainWork) + 1];
+		strcpy(mainWork, d.mainWork);
+		return *this;
+	}
 }
 
 void Bravo(const Cd& disk)
