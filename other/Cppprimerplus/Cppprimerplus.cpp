@@ -18,7 +18,11 @@
 //#include "mString.h"
 //#include "mStock.h"
 //#include "mStack2.h"
-#include "Cd.h"
+//#include "Cd.h"
+//#include "DMA.h"
+//#include "Port.h"
+
+#include "Wine.h"
 
 int main()
 {
@@ -38,7 +42,11 @@ int main()
 	//mStringClassTest();
 	//mStockClassTest();
 	//mStackClasstest();
-	CdClassTest();
+	//CdClassTest();
+	//DMAClassTest();
+	//PortClassTest();
+
+	WineClassTest();
 
 	return 0;
 }

@@ -18,6 +18,7 @@
 #include <numeric>
 #include <bitset>
 #include <array>
+#include <valarray>
 
 #include <random>
 #include "time.h"

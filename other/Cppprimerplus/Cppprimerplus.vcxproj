@@ -154,6 +154,7 @@
     <ClInclude Include="BandAccount.h" />
     <ClInclude Include="Cd.h" />
     <ClInclude Include="Cow.h" />
+    <ClInclude Include="DMA.h" />
     <ClInclude Include="Golf.h" />
     <ClInclude Include="mComplex.h" />
     <ClInclude Include="mList.h" />
@@ -166,15 +167,18 @@
     <ClInclude Include="mVector.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="Plorg.h" />
+    <ClInclude Include="Port.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Sales.h" />
     <ClInclude Include="Stonewt.h" />
+    <ClInclude Include="Wine.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BandAccount.cpp" />
     <ClCompile Include="Cd.cpp" />
     <ClCompile Include="Cow.cpp" />
     <ClCompile Include="Cppprimerplus.cpp" />
+    <ClCompile Include="DMA.cpp" />
     <ClCompile Include="global.h" />
     <ClCompile Include="Golf.cpp" />
     <ClCompile Include="mComplex.cpp" />
@@ -188,8 +192,10 @@
     <ClCompile Include="mVector.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="Plorg.cpp" />
+    <ClCompile Include="Port.cpp" />
     <ClCompile Include="Sales.cpp" />
     <ClCompile Include="Stonewt.cpp" />
+    <ClCompile Include="Wine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Cppprimerplus.rc" />
