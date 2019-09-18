@@ -84,6 +84,15 @@
     <ClInclude Include="Wine.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="QueueTp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mPerson.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="emp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cppprimerplus.cpp">
@@ -150,6 +159,15 @@
       <Filter>源文件\cppprimerplus10-13</Filter>
     </ClCompile>
     <ClCompile Include="Wine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="QueueTp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mPerson.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="emp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

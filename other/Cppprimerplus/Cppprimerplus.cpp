@@ -22,7 +22,10 @@
 //#include "DMA.h"
 //#include "Port.h"
 
-#include "Wine.h"
+//#include "Wine.h"
+//#include "QueueTp.h"
+//#include "mPerson.h"
+#include "emp.h"
 
 int main()
 {
@@ -46,7 +49,10 @@ int main()
 	//DMAClassTest();
 	//PortClassTest();
 
-	WineClassTest();
+	//WineClassTest();
+	//QueueTpClassTest();
+	//mPersonClassTest();
+	empClassTest();
 
 	return 0;
 }
