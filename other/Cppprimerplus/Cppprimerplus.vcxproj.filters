@@ -16,7 +16,13 @@
     <Filter Include="源文件\cppprimerplus10-13">
       <UniqueIdentifier>{05ae7fc4-734c-48f0-b5da-9fb22fc7ed7c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\cppprimerplus">
+    <Filter Include="源文件\cppprimerplus14">
+      <UniqueIdentifier>{39f88af9-a154-461a-825f-aa22befca5c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\cppprimerplus14">
+      <UniqueIdentifier>{f19d3f77-d770-4b6f-93c8-ddeaaf48e89c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\cppprimerplus10-13">
       <UniqueIdentifier>{13824455-24d8-455d-a733-debb533e9f34}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -25,72 +31,75 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Cd.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="Cow.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="DMA.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="Golf.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="mComplex.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="mList.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="Move.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="mStack.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="mStack2.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="mStock.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="mString.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="mTime.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="mVector.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="Person.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="Plorg.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="Port.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="Sales.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="Stonewt.h">
-      <Filter>头文件\cppprimerplus</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="BandAccount.h">
-      <Filter>头文件\cppprimerplus</Filter>
-    </ClInclude>
-    <ClInclude Include="Wine.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="QueueTp.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\cppprimerplus10-13</Filter>
     </ClInclude>
     <ClInclude Include="mPerson.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\cppprimerplus14</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueTp.h">
+      <Filter>头文件\cppprimerplus14</Filter>
+    </ClInclude>
+    <ClInclude Include="Wine.h">
+      <Filter>头文件\cppprimerplus14</Filter>
     </ClInclude>
     <ClInclude Include="emp.h">
+      <Filter>头文件\cppprimerplus14</Filter>
+    </ClInclude>
+    <ClInclude Include="tv.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -158,16 +167,19 @@
     <ClCompile Include="Stonewt.cpp">
       <Filter>源文件\cppprimerplus10-13</Filter>
     </ClCompile>
-    <ClCompile Include="Wine.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="QueueTp.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="emp.cpp">
+      <Filter>源文件\cppprimerplus14</Filter>
     </ClCompile>
     <ClCompile Include="mPerson.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\cppprimerplus14</Filter>
     </ClCompile>
-    <ClCompile Include="emp.cpp">
+    <ClCompile Include="QueueTp.cpp">
+      <Filter>源文件\cppprimerplus14</Filter>
+    </ClCompile>
+    <ClCompile Include="Wine.cpp">
+      <Filter>源文件\cppprimerplus14</Filter>
+    </ClCompile>
+    <ClCompile Include="tv.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -25,7 +25,8 @@
 //#include "Wine.h"
 //#include "QueueTp.h"
 //#include "mPerson.h"
-#include "emp.h"
+//#include "emp.h"
+#include "tv.h"
 
 int main()
 {
@@ -52,7 +53,9 @@ int main()
 	//WineClassTest();
 	//QueueTpClassTest();
 	//mPersonClassTest();
-	empClassTest();
+	//empClassTest();
+
+	tvClassTest();
 
 	return 0;
 }

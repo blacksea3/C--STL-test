@@ -174,6 +174,7 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="Sales.h" />
     <ClInclude Include="Stonewt.h" />
+    <ClInclude Include="tv.h" />
     <ClInclude Include="Wine.h" />
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +202,7 @@
     <ClCompile Include="QueueTp.cpp" />
     <ClCompile Include="Sales.cpp" />
     <ClCompile Include="Stonewt.cpp" />
+    <ClCompile Include="tv.cpp" />
     <ClCompile Include="Wine.cpp" />
   </ItemGroup>
   <ItemGroup>
