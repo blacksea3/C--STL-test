@@ -26,7 +26,9 @@
 //#include "QueueTp.h"
 //#include "mPerson.h"
 //#include "emp.h"
-#include "tv.h"
+//#include "tv.h"
+//#include "hmean.h"
+#include "mSales.h"
 
 int main()
 {
@@ -55,7 +57,9 @@ int main()
 	//mPersonClassTest();
 	//empClassTest();
 
-	tvClassTest();
+	//tvClassTest();
+	//hmeanFuncTest();
+	mSalesClassTest();
 
 	return 0;
 }
