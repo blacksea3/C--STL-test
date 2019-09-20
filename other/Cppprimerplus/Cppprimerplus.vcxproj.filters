@@ -31,6 +31,12 @@
     <Filter Include="头文件\cppprimerplus16">
       <UniqueIdentifier>{380cb820-411e-4acd-ace9-c086dc178356}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\cpptemplate">
+      <UniqueIdentifier>{52e66f7b-1139-42b5-80bc-fa7ace8f0b56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\cpptemplate">
+      <UniqueIdentifier>{061f1d1c-d6e8-44b9-9dd2-0ce1ced42efd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -119,6 +125,9 @@
     </ClInclude>
     <ClInclude Include="Cpp11ptr.h">
       <Filter>头文件\cppprimerplus16</Filter>
+    </ClInclude>
+    <ClInclude Include="cpptemplatetest.h">
+      <Filter>头文件\cpptemplate</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +223,9 @@
     </ClCompile>
     <ClCompile Include="Cpp11ptr.cpp">
       <Filter>源文件\cppprimerplus16</Filter>
+    </ClCompile>
+    <ClCompile Include="cpptemplatetest.cpp">
+      <Filter>源文件\cpptemplate</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

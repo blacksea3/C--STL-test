@@ -155,6 +155,7 @@
     <ClInclude Include="Cd.h" />
     <ClInclude Include="Cow.h" />
     <ClInclude Include="Cpp11ptr.h" />
+    <ClInclude Include="cpptemplatetest.h" />
     <ClInclude Include="DMA.h" />
     <ClInclude Include="emp.h" />
     <ClInclude Include="Golf.h" />
@@ -187,6 +188,7 @@
     <ClCompile Include="Cow.cpp" />
     <ClCompile Include="Cpp11ptr.cpp" />
     <ClCompile Include="Cppprimerplus.cpp" />
+    <ClCompile Include="cpptemplatetest.cpp" />
     <ClCompile Include="DMA.cpp" />
     <ClCompile Include="emp.cpp" />
     <ClCompile Include="global.h" />

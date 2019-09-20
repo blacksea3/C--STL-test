@@ -31,7 +31,8 @@
 //#include "mSales.h"
 
 //#include "STLiteratortest.h"
-#include "Cpp11ptr.h"
+//#include "Cpp11ptr.h"
+#include "cpptemplatetest.h"
 
 int main()
 {
@@ -65,7 +66,8 @@ int main()
 	//mSalesClassTest();
 	
 	//streamIteratorTest();
-	Cpp11ptrTest();
+	//Cpp11ptrTest();
+	cpptemplatetest1();
 
 	return 0;
 }
