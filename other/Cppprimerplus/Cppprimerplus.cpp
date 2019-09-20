@@ -28,7 +28,10 @@
 //#include "emp.h"
 //#include "tv.h"
 //#include "hmean.h"
-#include "mSales.h"
+//#include "mSales.h"
+
+//#include "STLiteratortest.h"
+#include "Cpp11ptr.h"
 
 int main()
 {
@@ -59,7 +62,10 @@ int main()
 
 	//tvClassTest();
 	//hmeanFuncTest();
-	mSalesClassTest();
+	//mSalesClassTest();
+	
+	//streamIteratorTest();
+	Cpp11ptrTest();
 
 	return 0;
 }

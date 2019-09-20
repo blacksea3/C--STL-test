@@ -25,6 +25,12 @@
     <Filter Include="头文件\cppprimerplus14-15">
       <UniqueIdentifier>{f19d3f77-d770-4b6f-93c8-ddeaaf48e89c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\cppprimerplus16">
+      <UniqueIdentifier>{e2fd90f0-6ea3-48e6-839d-43cfdc08a90f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\cppprimerplus16">
+      <UniqueIdentifier>{380cb820-411e-4acd-ace9-c086dc178356}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -107,6 +113,12 @@
     </ClInclude>
     <ClInclude Include="tv.h">
       <Filter>头文件\cppprimerplus14-15</Filter>
+    </ClInclude>
+    <ClInclude Include="STLiteratortest.h">
+      <Filter>头文件\cppprimerplus16</Filter>
+    </ClInclude>
+    <ClInclude Include="Cpp11ptr.h">
+      <Filter>头文件\cppprimerplus16</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +205,15 @@
     </ClCompile>
     <ClCompile Include="hmean.cpp">
       <Filter>源文件\cppprimerplus14-15</Filter>
+    </ClCompile>
+    <ClCompile Include="STLitaratortest.cpp">
+      <Filter>源文件\cppprimerplus16</Filter>
+    </ClCompile>
+    <ClCompile Include="STLiteratortest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cpp11ptr.cpp">
+      <Filter>源文件\cppprimerplus16</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

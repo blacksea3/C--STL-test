@@ -154,6 +154,7 @@
     <ClInclude Include="BandAccount.h" />
     <ClInclude Include="Cd.h" />
     <ClInclude Include="Cow.h" />
+    <ClInclude Include="Cpp11ptr.h" />
     <ClInclude Include="DMA.h" />
     <ClInclude Include="emp.h" />
     <ClInclude Include="Golf.h" />
@@ -175,6 +176,7 @@
     <ClInclude Include="QueueTp.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Sales.h" />
+    <ClInclude Include="STLiteratortest.h" />
     <ClInclude Include="Stonewt.h" />
     <ClInclude Include="tv.h" />
     <ClInclude Include="Wine.h" />
@@ -183,6 +185,7 @@
     <ClCompile Include="BandAccount.cpp" />
     <ClCompile Include="Cd.cpp" />
     <ClCompile Include="Cow.cpp" />
+    <ClCompile Include="Cpp11ptr.cpp" />
     <ClCompile Include="Cppprimerplus.cpp" />
     <ClCompile Include="DMA.cpp" />
     <ClCompile Include="emp.cpp" />
@@ -205,6 +208,8 @@
     <ClCompile Include="Port.cpp" />
     <ClCompile Include="QueueTp.cpp" />
     <ClCompile Include="Sales.cpp" />
+    <ClCompile Include="STLitaratortest.cpp" />
+    <ClCompile Include="STLiteratortest.cpp" />
     <ClCompile Include="Stonewt.cpp" />
     <ClCompile Include="tv.cpp" />
     <ClCompile Include="Wine.cpp" />
