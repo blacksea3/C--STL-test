@@ -129,6 +129,9 @@
     <ClInclude Include="cpptemplatetest.h">
       <Filter>头文件\cpptemplate</Filter>
     </ClInclude>
+    <ClInclude Include="m2Stack.h">
+      <Filter>头文件\cpptemplate</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cppprimerplus.cpp">
@@ -223,6 +226,9 @@
     </ClCompile>
     <ClCompile Include="Cpp11ptr.cpp">
       <Filter>源文件\cppprimerplus16</Filter>
+    </ClCompile>
+    <ClCompile Include="m2Stack.cpp">
+      <Filter>源文件\cpptemplate</Filter>
     </ClCompile>
     <ClCompile Include="cpptemplatetest.cpp">
       <Filter>源文件\cpptemplate</Filter>

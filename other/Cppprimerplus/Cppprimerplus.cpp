@@ -1,7 +1,8 @@
 ﻿//
 //入口源文件
 
-#include <iostream>
+#include "global.h"
+
 //#include "BandAccount.h"
 //#include "Person.h"
 //#include "Golf.h"
@@ -32,7 +33,8 @@
 
 //#include "STLiteratortest.h"
 //#include "Cpp11ptr.h"
-#include "cpptemplatetest.h"
+//#include "cpptemplatetest.h"
+#include "m2Stack.h"
 
 int main()
 {
@@ -67,7 +69,8 @@ int main()
 	
 	//streamIteratorTest();
 	//Cpp11ptrTest();
-	cpptemplatetest1();
+	//cpptemplatetest1();
+	m2StackClassTest();
 
 	return 0;
 }

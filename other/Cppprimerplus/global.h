@@ -2,6 +2,7 @@
 #define GLOBAL_H
 
 #define _CRT_SECURE_NO_WARNINGS
+#define _SILENCE_CXX17_STRSTREAM_DEPRECATION_WARNING
 
 #include <iostream>
 #include <vector>
@@ -23,6 +24,8 @@
 #include <random>
 #include "time.h"
 #include <fstream>
+
+#include "cassert"
 
 using namespace std;
 

@@ -91,6 +91,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -160,6 +161,7 @@
     <ClInclude Include="emp.h" />
     <ClInclude Include="Golf.h" />
     <ClInclude Include="hmean.h" />
+    <ClInclude Include="m2Stack.h" />
     <ClInclude Include="mComplex.h" />
     <ClInclude Include="mList.h" />
     <ClInclude Include="Move.h" />
@@ -194,6 +196,7 @@
     <ClCompile Include="global.h" />
     <ClCompile Include="Golf.cpp" />
     <ClCompile Include="hmean.cpp" />
+    <ClCompile Include="m2Stack.cpp" />
     <ClCompile Include="mComplex.cpp" />
     <ClCompile Include="mList.cpp" />
     <ClCompile Include="Move.cpp" />
