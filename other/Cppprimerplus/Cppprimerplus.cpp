@@ -33,8 +33,8 @@
 
 //#include "STLiteratortest.h"
 //#include "Cpp11ptr.h"
-//#include "cpptemplatetest.h"
-#include "m2Stack.h"
+#include "cpptemplatetest.h"
+//#include "m2Stack.h"
 
 int main()
 {
@@ -69,8 +69,8 @@ int main()
 	
 	//streamIteratorTest();
 	//Cpp11ptrTest();
-	//cpptemplatetest1();
-	m2StackClassTest();
+	cpptemplatetest1();
+	//m2StackClassTest();
 
 	return 0;
 }

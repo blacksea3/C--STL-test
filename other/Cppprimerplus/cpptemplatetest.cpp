@@ -34,8 +34,16 @@ common_type_t<T1, T2> mMaxCpp14C(T1 const& para1, T2 const& para2)
 	return (para1 < para2) ? para2 : para1;
 }
 
+//Val 非类型模板参数
+template<typename T, int Val>
+T const mAdd(T const& p1)
+{
+	return p1 + Val;
+}
+
 void cpptemplatetest1()
 {
+	/*
 	common_type<int, double>::type cpp11; //cpp11特性
 	common_type_t<int, double> cpp14;     //cpp14特性
 
@@ -45,4 +53,7 @@ void cpptemplatetest1()
 	cout << mMaxCpp14(d1, i1) << endl;
 	cout << mMaxCpp11E(d1, i1) << endl;
 	cout << mMaxCpp14C(d1, i1) << endl;
+	*/
+
+	cout << mAdd<int, 5>(1) << endl;
 }
