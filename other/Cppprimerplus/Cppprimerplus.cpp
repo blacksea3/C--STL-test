@@ -36,6 +36,8 @@
 #include "cpptemplatetest.h"
 //#include "m2Stack.h"
 
+#include "tmplbook-code/basics/printcoll.hpp"
+
 int main()
 {
 	//BandAccountClassTest();
@@ -69,8 +71,9 @@ int main()
 	
 	//streamIteratorTest();
 	//Cpp11ptrTest();
-	cpptemplatetest1();
+	//cpptemplatetest1();
 	//m2StackClassTest();
+	printcollFuncTest();
 
 	return 0;
 }

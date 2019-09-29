@@ -41,8 +41,46 @@ T const mAdd(T const& p1)
 	return p1 + Val;
 }
 
+//可变数量模板参数
+void print()
+{
+
+}
+
+template<typename T, typename... Types>
+void print(T firstArg, Types... args)
+{
+	cout << firstArg << endl;
+	cout << "remain1: " << sizeof...(Types) << endl;
+	cout << "remain2: " << sizeof...(args) << endl;
+	print(args...);
+}
+
+void pam(int i)
+{
+	cout << i << endl;
+}
+
+template<typename T, typename... Types>
+void estimate(T firstArg, Types... args)
+{
+	time_t starttime = time(0);
+	firstArg(args...);
+	time_t endtime = time(0);
+	cout << "used time: " << (endtime - starttime) << endl;
+}
+
 void cpptemplatetest1()
 {
+	void(*pf)(int);
+	pf = pam;
+
+	estimate(pf, 1);
+
+
+	vector<int> v;
+	//v.emplace_back(1, 2, 3);
+
 	/*
 	common_type<int, double>::type cpp11; //cpp11特性
 	common_type_t<int, double> cpp14;     //cpp14特性
@@ -55,5 +93,8 @@ void cpptemplatetest1()
 	cout << mMaxCpp14C(d1, i1) << endl;
 	*/
 
-	cout << mAdd<int, 5>(1) << endl;
+	//cout << mAdd<int, 5>(1) << endl;
+
+	//print(7, 5, "hello", string("dsds"));
+
 }

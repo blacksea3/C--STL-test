@@ -181,6 +181,7 @@
     <ClInclude Include="Sales.h" />
     <ClInclude Include="STLiteratortest.h" />
     <ClInclude Include="Stonewt.h" />
+    <ClInclude Include="tmplbook-code\basics\printcoll.hpp" />
     <ClInclude Include="tv.h" />
     <ClInclude Include="Wine.h" />
   </ItemGroup>

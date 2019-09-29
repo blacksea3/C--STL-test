@@ -37,6 +37,9 @@
     <Filter Include="头文件\cpptemplate">
       <UniqueIdentifier>{061f1d1c-d6e8-44b9-9dd2-0ce1ced42efd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\cpptemplate\basics">
+      <UniqueIdentifier>{abc6df1f-c56b-4125-bdb7-9d7b8651990e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -131,6 +134,9 @@
     </ClInclude>
     <ClInclude Include="m2Stack.h">
       <Filter>头文件\cpptemplate</Filter>
+    </ClInclude>
+    <ClInclude Include="tmplbook-code\basics\printcoll.hpp">
+      <Filter>源文件\cpptemplate\basics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
