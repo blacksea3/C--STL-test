@@ -158,6 +158,7 @@
     <ClInclude Include="Cpp11ptr.h" />
     <ClInclude Include="cpptemplatetest.h" />
     <ClInclude Include="DMA.h" />
+    <ClInclude Include="dsPolymorphism.h" />
     <ClInclude Include="emp.h" />
     <ClInclude Include="Golf.h" />
     <ClInclude Include="hmean.h" />
@@ -193,6 +194,7 @@
     <ClCompile Include="Cppprimerplus.cpp" />
     <ClCompile Include="cpptemplatetest.cpp" />
     <ClCompile Include="DMA.cpp" />
+    <ClCompile Include="dsPolymorphism.cpp" />
     <ClCompile Include="emp.cpp" />
     <ClCompile Include="global.h" />
     <ClCompile Include="Golf.cpp" />

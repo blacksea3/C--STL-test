@@ -138,6 +138,9 @@
     <ClInclude Include="tmplbook-code\basics\printcoll.hpp">
       <Filter>源文件\cpptemplate\basics</Filter>
     </ClInclude>
+    <ClInclude Include="dsPolymorphism.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cppprimerplus.cpp">
@@ -238,6 +241,9 @@
     </ClCompile>
     <ClCompile Include="cpptemplatetest.cpp">
       <Filter>源文件\cpptemplate</Filter>
+    </ClCompile>
+    <ClCompile Include="dsPolymorphism.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

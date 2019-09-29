@@ -42,18 +42,18 @@ T const mAdd(T const& p1)
 }
 
 //可变数量模板参数
-void print()
+void printcpptemplatetest()
 {
 
 }
 
 template<typename T, typename... Types>
-void print(T firstArg, Types... args)
+void printcpptemplatetest(T firstArg, Types... args)
 {
 	cout << firstArg << endl;
 	cout << "remain1: " << sizeof...(Types) << endl;
 	cout << "remain2: " << sizeof...(args) << endl;
-	print(args...);
+	printcpptemplatetest(args...);
 }
 
 void pam(int i)
@@ -74,10 +74,7 @@ void cpptemplatetest1()
 {
 	void(*pf)(int);
 	pf = pam;
-
 	estimate(pf, 1);
-
-
 	vector<int> v;
 	//v.emplace_back(1, 2, 3);
 
@@ -94,7 +91,4 @@ void cpptemplatetest1()
 	*/
 
 	//cout << mAdd<int, 5>(1) << endl;
-
-	//print(7, 5, "hello", string("dsds"));
-
 }

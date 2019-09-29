@@ -33,10 +33,13 @@
 
 //#include "STLiteratortest.h"
 //#include "Cpp11ptr.h"
-#include "cpptemplatetest.h"
+//#include "cpptemplatetest.h"
 //#include "m2Stack.h"
 
-#include "tmplbook-code/basics/printcoll.hpp"
+#include "dsPolymorphism.h"
+//#include "acctabc.h"
+
+//#include "tmplbook-code/basics/printcoll.hpp"
 
 int main()
 {
@@ -73,8 +76,12 @@ int main()
 	//Cpp11ptrTest();
 	//cpptemplatetest1();
 	//m2StackClassTest();
-	printcollFuncTest();
 
+	dynamic_static_PolymorphismTest();
+	
+	//printcollFuncTest();
+
+	//AcctABC* p;
+	//p = new Brass();
 	return 0;
 }
-
