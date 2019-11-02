@@ -6,42 +6,42 @@ T const mMax(T const& para1, T const & para2)
 	return (para1 < para2) ? para2 : para1;
 }
 
-//cpp11ÌØÐÔ£¬×Ô¶¯ÍÆ¶Ïº¯Êý·µ»ØÀàÐÍ
+//cpp11ï¿½ï¿½ï¿½Ô£ï¿½ï¿½Ô¶ï¿½ï¿½Æ¶Ïºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 template<typename T1, typename T2>
 auto mMaxCpp11(T1 const& para1, T2 const& para2) -> decltype(true ? para1 : para2)
 {
 	return (para1 < para2) ? para2 : para1;
 }
 
-//cpp14ÌØÐÔ£¬×Ô¶¯ÍÆ¶Ïº¯Êý·µ»ØÀàÐÍ
+//cpp14ï¿½ï¿½ï¿½Ô£ï¿½ï¿½Ô¶ï¿½ï¿½Æ¶Ïºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 template<typename T1, typename T2>
 auto mMaxCpp14(T1 const& para1, T2 const& para2)
 {
 	return (para1 < para2) ? para2 : para1;
 }
 
-//cpp11ÌØÐÔ£¬×Ô¶¯ÍÆ¶Ïº¯Êý·µ»ØÀàÐÍ£¬std::decay<xxx>¿É½«ÒýÓÃµÈÌØÊâÀàÐÍÈ¥³ý
+//cpp11ï¿½ï¿½ï¿½Ô£ï¿½ï¿½Ô¶ï¿½ï¿½Æ¶Ïºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½std::decay<xxx>ï¿½É½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½
 template<typename T1, typename T2>
 auto mMaxCpp11E(T1 const& para1, T2 const& para2) -> typename decay<decltype(true ? para1 : para2)>::type
 {
 	return (para1 < para2) ? para2 : para1;
 }
 
-//cpp14ÌØÐÔ£¬·µ»Øcommon_type£¬common_typeÒ²ÓÐdecayµÄ¹¦ÄÜ£º¿É½«ÒýÓÃµÈÌØÊâÀàÐÍÈ¥³ý
+//cpp14ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½common_typeï¿½ï¿½common_typeÒ²ï¿½ï¿½decayï¿½Ä¹ï¿½ï¿½Ü£ï¿½ï¿½É½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½
 template<typename T1, typename T2>
 common_type_t<T1, T2> mMaxCpp14C(T1 const& para1, T2 const& para2)
 {
 	return (para1 < para2) ? para2 : para1;
 }
 
-//Val ·ÇÀàÐÍÄ£°å²ÎÊý
+//Val ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½
 template<typename T, int Val>
 T const mAdd(T const& p1)
 {
 	return p1 + Val;
 }
 
-//¿É±äÊýÁ¿Ä£°å²ÎÊý
+//ï¿½É±ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½
 void printcpptemplatetest()
 {
 
@@ -79,8 +79,8 @@ void cpptemplatetest1()
 	//v.emplace_back(1, 2, 3);
 
 	/*
-	common_type<int, double>::type cpp11; //cpp11ÌØÐÔ
-	common_type_t<int, double> cpp14;     //cpp14ÌØÐÔ
+	common_type<int, double>::type cpp11; //cpp11ï¿½ï¿½ï¿½ï¿½
+	common_type_t<int, double> cpp14;     //cpp14ï¿½ï¿½ï¿½ï¿½
 
 	double d1 = 2.1;
 	int i1 = 1;

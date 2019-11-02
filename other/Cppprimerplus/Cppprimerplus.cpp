@@ -43,6 +43,10 @@
 
 int main()
 {
+	vector<int> v;
+	assert(v.begin() == v.end());
+	sort(v.begin(), v.end());
+
 	//BandAccountClassTest();
 	//PersonClassTest();
 	//GolfClassTest();
@@ -77,7 +81,7 @@ int main()
 	//cpptemplatetest1();
 	//m2StackClassTest();
 
-	dynamic_static_PolymorphismTest();
+	//dynamic_static_PolymorphismTest();
 	
 	//printcollFuncTest();
 

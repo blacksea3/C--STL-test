@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="public">
+      <UniqueIdentifier>{46304be0-51e3-44fd-9702-22a42077c4de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fibonacci">
+      <UniqueIdentifier>{c4f4ca9f-3314-4840-8253-b2733995a607}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Greedy">
+      <UniqueIdentifier>{ada93d4d-bf9a-4725-af15-1a8a56967c49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mGCD">
+      <UniqueIdentifier>{c80ac345-5733-4255-a373-d2df585ac05d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DivideConquer">
+      <UniqueIdentifier>{b906e3c5-3f7f-4377-bcb2-2c6165f2226a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sort">
+      <UniqueIdentifier>{20da07aa-cc9a-46c2-9527-bc5027475825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DynamicProgramming">
+      <UniqueIdentifier>{8d2ccf66-609d-4c56-94af-6d1181068f91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mLib">
+      <UniqueIdentifier>{27f8910f-618f-4252-be82-35257bd2dfd3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Fibonacci\fibonacci.cpp">
+      <Filter>Fibonacci</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DivideConquer\BinarySearch.cpp">
+      <Filter>DivideConquer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Greedy\MinRefills.cpp">
+      <Filter>Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mGCD\mGCD.cpp">
+      <Filter>mGCD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\mLib\mLibvector.cpp">
+      <Filter>mLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sort\Sort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DivideConquer\PolyMul.cpp">
+      <Filter>DivideConquer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DynamicProgramming\DPchange.cpp">
+      <Filter>DynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DynamicProgramming\EditDistance.cpp">
+      <Filter>DynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DynamicProgramming\Knapsack.cpp">
+      <Filter>DynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DynamicProgramming\PlaceParentheses.cpp">
+      <Filter>DynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mLib\mLibpriorityQueue.cpp">
+      <Filter>mLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mLib\mLibDisjointSet.cpp">
+      <Filter>mLib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Fibonacci\fibonacci.hpp">
+      <Filter>Fibonacci</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DivideConquer\BinarySearch.hpp">
+      <Filter>DivideConquer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Greedy\MinRefills.hpp">
+      <Filter>Greedy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mGCD\mGCD.hpp">
+      <Filter>mGCD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\estimateFuncTime.hpp">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\public.hpp">
+      <Filter>public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mLib\mLibvector.hpp">
+      <Filter>mLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DivideConquer\PolyMul.hpp">
+      <Filter>DivideConquer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mLib\mLibpriorityQueue.hpp">
+      <Filter>mLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mLib\mLibalgorithm.hpp">
+      <Filter>mLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sort\Sort.hpp">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mLib\mLibDisjointSet.hpp">
+      <Filter>mLib</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

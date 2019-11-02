@@ -42,5 +42,14 @@ other/.vs
 other/Cppprimerplus/.vs
 other/Cppprimerplus/Debug
 other/Cppprimerplus/x64/Debug
+other/CppAlgs/.vs
+other/CppAlgs/Debug
+other/CppAlgs/x64/Debug
 other/Debug
 other/x64/Debug
+
+*.idb
+*.pdb
+*.tlog
+*.log
+*.lastbuildstate

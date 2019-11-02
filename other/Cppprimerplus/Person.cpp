@@ -4,7 +4,7 @@ Person::Person(const string & ln, const char * fn)
 {
 	this->lname = ln;
 	size_t firstNameLength = strnlen_s(fn, 25);
-	if (firstNameLength == 25) //ǿ�ƽض�
+	if (firstNameLength == 25) //ǿ�ƽض�
 	{
 		this->fname[24] = '\n';
 		strncpy_s(this->fname, fn, 24);

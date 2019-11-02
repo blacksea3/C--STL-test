@@ -99,7 +99,7 @@ mVector operator*(double n, const mVector & a)
 
 std::ostream & operator<<(std::ostream & os, const mVector & v)
 {
-	// TODO: ÔÚ´Ë´¦²åÈë return Óï¾ä
+	// TODO: ï¿½Ú´Ë´ï¿½ï¿½ï¿½ï¿½ï¿½ return ï¿½ï¿½ï¿½
 	os << "(x,y) = (" << v.x << ", " << v.y << ")";
 	return os;
 }
@@ -117,9 +117,9 @@ void mVectorClassTest()
 	unsigned long min_step = INT_MAX;
 	unsigned long sum_step = 0;
 	unsigned long num_of_step = 0;
-	// ÒÔĞ´Ä£Ê½´ò¿ªÎÄ¼ş
+	// ï¿½ï¿½Ğ´Ä£Ê½ï¿½ï¿½ï¿½Ä¼ï¿½
 	ofstream f;
-	f.open("C:\\Users\\blacksea9\\Desktop\\mVectorClassTest.txt");  //Â·¾¶°´ĞèĞŞ¸Ä
+	f.open("C:\\Users\\blacksea9\\Desktop\\mVectorClassTest.txt");  //Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ş¸ï¿½
 
 	cout << "Enter target distance (q to quit): ";
 	while (cin >> target)
@@ -142,7 +142,7 @@ void mVectorClassTest()
 			steps++;
 		}
 
-		//Êä³öÖÁÎÄ¼ş
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 		f << "After " << steps << " steps, the subject "
 			"has the following location:\n";
 		f << result << endl;
@@ -158,7 +158,7 @@ void mVectorClassTest()
 		cout << "Enter target distance (q to quit): ";
 	}
 
-	//×î¸ß¡¢×îµÍ²½Êı¡¢Æ½¾ù²½Êı·ÅÈë×îºóµÄÎÄ¼ş
+	//ï¿½ï¿½ß¡ï¿½ï¿½ï¿½Í²ï¿½ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 	f << "=========================================" << endl;
 	f << "Max steps: " << max_step  << endl;
 	f << "Min steps: " << min_step << endl;
