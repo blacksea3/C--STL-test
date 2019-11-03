@@ -67,6 +67,9 @@
     <ClCompile Include="..\mLib\mLibDisjointSet.cpp">
       <Filter>mLib</Filter>
     </ClCompile>
+    <ClCompile Include="..\mLib\mLibunorderedmap.cpp">
+      <Filter>mLib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci\fibonacci.hpp">
@@ -103,6 +106,9 @@
       <Filter>Sort</Filter>
     </ClInclude>
     <ClInclude Include="..\mLib\mLibDisjointSet.hpp">
+      <Filter>mLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mLib\mLibunorderedmap.hpp">
       <Filter>mLib</Filter>
     </ClInclude>
   </ItemGroup>

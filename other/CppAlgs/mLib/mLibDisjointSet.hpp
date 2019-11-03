@@ -16,7 +16,7 @@ namespace mLib
 		mLib::mvector<size_t> memory;
 		size_t recuFind(size_t i);
 	public:
-		mDisjoint(mLib::mvector<T>& v);
+		mDisjoint(const mLib::mvector<T>& v);
 		void Union(T t1, T t2);
 		size_t Find(T t);
 	};
@@ -30,11 +30,10 @@ namespace mLib
 	}
 
 	template<typename T>
-	mDisjoint<T>::mDisjoint(mLib::mvector<T> & v)
+	mDisjoint<T>::mDisjoint(const mLib::mvector<T> & v)
 	{
-		const size_t vSize = v.getSize();
-		this->memory.resize(vSize);
-		for (size_t i = 0; i < vSize; ++i)
+		this->memory.resize(v.getSize());
+		for (size_t i = 0; i < v.getSize(); ++i)
 		{
 			T temp = v[i];
 			this->um[temp] = i;

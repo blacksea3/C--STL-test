@@ -5,7 +5,9 @@
 //#include "mLib/mLibvector.hpp"
 //#include "mLib/mLibpriorityQueue.hpp"
 //#include "Sort/Sort.hpp"
-#include "mLib/mLibDisjointSet.hpp"
+//#include "mLib/mLibDisjointSet.hpp"
+
+#include "mLib/mLibunorderedmap.hpp"
 
 int main()
 {
@@ -16,6 +18,8 @@ int main()
 	//mLib::mvectorClassTimeTest();
 	//mLib::mLibpriorityQueueClassTimeTest();
 	//SortInterface();
-	mLib::mLibDisjointSetClassTest();
+	//mLib::mLibDisjointSetClassTest();
+
+	mLib::mLibunorderedmapClassTest();
 	return 0;
 }

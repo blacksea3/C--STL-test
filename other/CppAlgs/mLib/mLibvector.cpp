@@ -3,7 +3,7 @@
 
 namespace mLib
 {
-	void mLibvector(size_t outloop, int sizet)
+	void mLibvectorpushback(size_t outloop, int sizet)
 	{
 		mLib::mvector<int> v;
 		for (size_t i = 0; i < outloop; ++i)
@@ -15,7 +15,7 @@ namespace mLib
 		}
 	}
 
-	void stdvector(int outloop, size_t sizet)
+	void stdvectorpushback(size_t outloop, int sizet)
 	{
 		vector<int> v;
 		for (size_t i = 0; i < outloop; ++i)
@@ -27,12 +27,43 @@ namespace mLib
 		}
 	}
 
+	void mLibvectorinsert(size_t outloop, int sizet)
+	{
+		mLib::mvector<int> v;
+		for (size_t i = 0; i < outloop; ++i)
+		{
+			for (int i = 0; i < sizet; ++i)
+			{
+				v.insert(0, i);
+			}
+		}
+		;
+	}
+
+	void stdvectorinsert(size_t outloop, int sizet)
+	{
+		vector<int> v;
+		for (size_t i = 0; i < outloop; ++i)
+		{
+			for (int i = 0; i < sizet; ++i)
+			{
+				v.insert(v.begin(), i);
+			}
+		}
+		;
+	}
+
 	void mvectorClassTimeTest()
 	{
-		cout << "mLibvector";
-		estimateFuncTime(mLibvector, 1, 1000000);
-		cout << "stdvector";
-		estimateFuncTime(stdvector, 1, 1000000);
+		cout << "mLibvector:pushback";
+		estimateFuncTime(mLibvectorpushback, 1, 1000000);
+		cout << "stdvector:pushback";
+		estimateFuncTime(stdvectorpushback, 1, 1000000);
+
+		cout << "mLibvector:insert(0)";
+		estimateFuncTime(mLibvectorinsert, 1, 10000);
+		cout << "stdvector:insert(0)";
+		estimateFuncTime(stdvectorinsert, 1, 10000);
 	}
 
 	void mvectorClassTest()

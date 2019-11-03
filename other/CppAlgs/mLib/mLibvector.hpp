@@ -1,5 +1,7 @@
 #pragma once
 
+#include "mLibalgorithm.hpp"
+
 namespace mLib
 {
 	const size_t vectorDefaultCapacity = 8;
@@ -8,7 +10,6 @@ namespace mLib
 	 * 自定义vector
 	 * 警告: 内部使用动态分配内存
 	 * 警告: 部分函数使用异常
-	 * 注意: 内部使用min, 来自原生库函数
 	 */
 	template<typename T>
 	class mvector
@@ -24,11 +25,13 @@ namespace mLib
 		~mvector();
 
 		T at(size_t index);
-		T& operator[](size_t index);
+		inline const T& operator[](size_t index) const { return *(this->first + index); };
+		inline T& operator[](size_t index) { return *(this->first + index); };
 		void set(size_t index, T val);
 		void pop_back();
 		void push_back(T val);
 		void resize(size_t size);
+		void insert(size_t index, T val);
 		inline size_t getSize(){ return this->size; }
 		inline const size_t getSize() const { return this->size; }
 		inline size_t getCapacity() { return this->capacity; };
@@ -73,13 +76,6 @@ namespace mLib
 	}
 
 	template<typename T>
-	T& mvector<T>::operator[](size_t index)
-	{
-		if (index >= this->size) throw "index out of range";
-		else return *(this->first + index);
-	}
-
-	template<typename T>
 	void mvector<T>::set(size_t index, T val)
 	{
 		if (index >= this->size) throw "index out of range";
@@ -106,7 +102,7 @@ namespace mLib
 		}
 		else
 		{
-		    capacity *= 2;
+			this->capacity *= 2;
 			T* temp = new T[this->capacity];
 			for (size_t i = 0; i < size; ++i) *(temp + i) = *(this->first + i);
 			delete[] this->first;
@@ -119,10 +115,10 @@ namespace mLib
 	template<typename T>
 	void mvector<T>::resize(size_t size)
 	{
-		if (size <= capacity) this->size = size;
+		if (this->size <= this->capacity) this->size = size;
 		else
 		{
-			size_t newCap = min(2 * size, vectorDefaultCapacity);
+			size_t newCap = mLib::min<size_t>(2 * size, vectorDefaultCapacity);
 			T* temp = new T[newCap];
 			if (this->size > 0)
 			{
@@ -132,6 +128,31 @@ namespace mLib
 				this->capacity = newCap;
 				this->size = size;
 			}
+		}
+	}
+
+	template<typename T>
+	void mvector<T>::insert(size_t index, T val)
+	{
+		if (this->size < this->capacity)
+		{
+			for (size_t i = this->size; i > index; --i)
+			{
+				*(this->first + i) = *(this->first + i - 1);
+			}
+			*(this->first + index) = val;
+			this->size++;
+		}
+		else
+		{
+			this->capacity *= 2;
+			T* temp = new T[this->capacity];
+			for (size_t i = 0; i < index; ++i) *(temp + i) = *(this->first + i);
+			for (size_t i = index + 1; i < this->size; ++i) *(temp + i) = *(this->first + i);
+			*(temp + index) = val;
+			delete[] this->first;
+			this->first = temp;
+			this->size++;
 		}
 	}
 
