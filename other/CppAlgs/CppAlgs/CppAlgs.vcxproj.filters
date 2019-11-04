@@ -67,7 +67,10 @@
     <ClCompile Include="..\mLib\mLibDisjointSet.cpp">
       <Filter>mLib</Filter>
     </ClCompile>
-    <ClCompile Include="..\mLib\mLibunorderedmap.cpp">
+    <ClCompile Include="..\mLib\mLibunordered_map.cpp">
+      <Filter>mLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mLib\mLiblist.cpp">
       <Filter>mLib</Filter>
     </ClCompile>
   </ItemGroup>
@@ -108,7 +111,10 @@
     <ClInclude Include="..\mLib\mLibDisjointSet.hpp">
       <Filter>mLib</Filter>
     </ClInclude>
-    <ClInclude Include="..\mLib\mLibunorderedmap.hpp">
+    <ClInclude Include="..\mLib\mLibunordered_map.hpp">
+      <Filter>mLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mLib\mLiblist.hpp">
       <Filter>mLib</Filter>
     </ClInclude>
   </ItemGroup>

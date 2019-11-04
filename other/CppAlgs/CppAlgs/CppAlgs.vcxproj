@@ -30,8 +30,9 @@
     <ClCompile Include="..\main.cpp" />
     <ClCompile Include="..\mGCD\mGCD.cpp" />
     <ClCompile Include="..\mLib\mLibDisjointSet.cpp" />
+    <ClCompile Include="..\mLib\mLiblist.cpp" />
     <ClCompile Include="..\mLib\mLibpriorityQueue.cpp" />
-    <ClCompile Include="..\mLib\mLibunorderedmap.cpp" />
+    <ClCompile Include="..\mLib\mLibunordered_map.cpp" />
     <ClCompile Include="..\mLib\mLibvector.cpp" />
     <ClCompile Include="..\Sort\Sort.cpp" />
   </ItemGroup>
@@ -43,8 +44,9 @@
     <ClInclude Include="..\mGCD\mGCD.hpp" />
     <ClInclude Include="..\mLib\mLibalgorithm.hpp" />
     <ClInclude Include="..\mLib\mLibDisjointSet.hpp" />
+    <ClInclude Include="..\mLib\mLiblist.hpp" />
     <ClInclude Include="..\mLib\mLibpriorityQueue.hpp" />
-    <ClInclude Include="..\mLib\mLibunorderedmap.hpp" />
+    <ClInclude Include="..\mLib\mLibunordered_map.hpp" />
     <ClInclude Include="..\mLib\mLibvector.hpp" />
     <ClInclude Include="..\public\estimateFuncTime.hpp" />
     <ClInclude Include="..\public\public.hpp" />

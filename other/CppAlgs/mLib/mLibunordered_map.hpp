@@ -95,5 +95,17 @@ namespace mLib
 		return res;
 	}
 
+	/*
+	class munordered_map
+	{
+	private:
+		mLib::
+
+	public:
+		munordered_map();
+
+	};
+	*/
+
 	void mLibunorderedmapClassTest();
 }

@@ -7,7 +7,8 @@
 //#include "Sort/Sort.hpp"
 //#include "mLib/mLibDisjointSet.hpp"
 
-#include "mLib/mLibunorderedmap.hpp"
+//#include "mLib/mLibunordered_map.hpp"
+#include "mLib/mLiblist.hpp"
 
 int main()
 {
@@ -20,6 +21,7 @@ int main()
 	//SortInterface();
 	//mLib::mLibDisjointSetClassTest();
 
-	mLib::mLibunorderedmapClassTest();
+	//mLib::mLibunorderedmapClassTest();
+	mLib::mlistClassTest();
 	return 0;
 }
