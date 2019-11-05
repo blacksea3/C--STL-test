@@ -4,13 +4,13 @@
 namespace mLib
 {
 	/*
-	 * 自定义单端链表
+	 * 自定义单端链表, 允许重复元素, 但删除元素时按遍历到的第一个删除
 	 * 内部可能返回异常
 	 */
 	template<typename T>
 	class mlist
 	{
-	private:
+	public:
 		/*
 		 * 类内节点
 		 */
@@ -31,7 +31,7 @@ namespace mLib
 		mlist(mLib::mlist<T> const& m);
 		mLib::mlist<T>& operator=(mLib::mlist<T> const& m);
 
-		void erase(T t);      //必须确保元素存在, 否则抛出异常
+		bool erase(T t);      //元素删除成功返回true, 否则返回false
 		void pushback(T t);
 		~mlist();
 		friend ostream& operator<<(ostream& os, mLib::mlist<T>& m)
@@ -85,7 +85,7 @@ namespace mLib
 	}
 
 	template<typename T>
-	void mlist<T>::erase(T t)
+	bool mlist<T>::erase(T t)
 	{
 		Node* preListN = this->head->next;
 		Node* lastListN = this->head;
@@ -96,7 +96,7 @@ namespace mLib
 			{
 				lastListN->next = preListN->next;
 				delete preListN;
-				return;
+				return true;
 			}
 			else
 			{
@@ -104,7 +104,7 @@ namespace mLib
 				preListN = preListN->next;
 			}
 		}
-		throw "mLiblist:erase error, value you want to delete cannot be found";
+		return false;
 	}
 
 	template<typename T>

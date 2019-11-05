@@ -4,7 +4,7 @@
 
 namespace mLib
 {
-	void mLibunorderedmapClassTest()
+	void mLibunordered_mapClassTest()
 	{
 		cout << mLib::mhash<int>(1, 10) << endl;
 		cout << mLib::mhash<unsigned int>(1, 10) << endl;
@@ -17,5 +17,17 @@ namespace mLib
 		cout << mLib::mhash<std::string>("ssss", 10) << endl;
 		cout << mLib::mhash<const std::string>((std::string)"ssss", 10) << endl;
 		cout << mLib::mhash<std::pair<int, int>>(std::pair<int, int>{1,1}, 10) << endl;
+
+		mLib::munordered_map<int, int> mum;
+		pair<bool, int> p;
+		p = mum.get(2);
+		cout << 2 << ":" << ((p.first) ? p.second : -1) << endl;
+
+		for (int i = 0; i < 1000; ++i)
+		{
+			mum.set(i, 20000 + i);
+		}
+		p = mum.get(2);
+		cout << 2 << ":" << ((p.first) ? p.second : -1) << endl;
 	}
 }

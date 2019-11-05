@@ -8,7 +8,8 @@
 //#include "mLib/mLibDisjointSet.hpp"
 
 //#include "mLib/mLibunordered_map.hpp"
-#include "mLib/mLiblist.hpp"
+//#include "mLib/mLiblist.hpp"
+#include "mLib/mLibunordered_map.hpp"
 
 int main()
 {
@@ -22,6 +23,7 @@ int main()
 	//mLib::mLibDisjointSetClassTest();
 
 	//mLib::mLibunorderedmapClassTest();
-	mLib::mlistClassTest();
+	//mLib::mlistClassTest();
+	mLib::mLibunordered_mapClassTest();
 	return 0;
 }

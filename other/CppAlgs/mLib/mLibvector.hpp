@@ -115,19 +115,19 @@ namespace mLib
 	template<typename T>
 	void mvector<T>::resize(size_t size)
 	{
-		if (this->size <= this->capacity) this->size = size;
+		if (size <= this->capacity) this->size = size;
 		else
 		{
-			size_t newCap = mLib::min<size_t>(2 * size, vectorDefaultCapacity);
+			size_t newCap = mLib::max<size_t>(2 * size, vectorDefaultCapacity);
 			T* temp = new T[newCap];
 			if (this->size > 0)
 			{
 				for (size_t i = 0; i < this->size; ++i) *(temp + i) = *(this->first + i);
-				delete[] this->first;
-				this->first = temp;
-				this->capacity = newCap;
-				this->size = size;
 			}
+			delete[] this->first;
+			this->first = temp;
+			this->capacity = newCap;
+			this->size = size;
 		}
 	}
 
