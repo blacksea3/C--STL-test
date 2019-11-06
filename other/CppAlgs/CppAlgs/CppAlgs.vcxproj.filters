@@ -25,6 +25,9 @@
     <Filter Include="mLib">
       <UniqueIdentifier>{27f8910f-618f-4252-be82-35257bd2dfd3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="String">
+      <UniqueIdentifier>{f40899e3-0417-4639-a32d-465a8d09b0db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Fibonacci\fibonacci.cpp">
@@ -73,6 +76,12 @@
     <ClCompile Include="..\mLib\mLiblist.cpp">
       <Filter>mLib</Filter>
     </ClCompile>
+    <ClCompile Include="..\String\RabinKarp.cpp">
+      <Filter>String</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mLib\mLibBinaryTree.cpp">
+      <Filter>mLib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci\fibonacci.hpp">
@@ -115,6 +124,12 @@
       <Filter>mLib</Filter>
     </ClInclude>
     <ClInclude Include="..\mLib\mLiblist.hpp">
+      <Filter>mLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\String\RabinKarp.hpp">
+      <Filter>String</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mLib\mLibBinaryTree.hpp">
       <Filter>mLib</Filter>
     </ClInclude>
   </ItemGroup>

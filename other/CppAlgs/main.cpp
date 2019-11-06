@@ -9,7 +9,9 @@
 
 //#include "mLib/mLibunordered_map.hpp"
 //#include "mLib/mLiblist.hpp"
-#include "mLib/mLibunordered_map.hpp"
+//#include "mLib/mLibunordered_map.hpp"
+//#include "String/RabinKarp.hpp"
+#include "mLib/mLibBinaryTree.hpp"
 
 int main()
 {
@@ -24,6 +26,8 @@ int main()
 
 	//mLib::mLibunorderedmapClassTest();
 	//mLib::mlistClassTest();
-	mLib::mLibunordered_mapClassTest();
+	//mLib::mLibunordered_mapClassTest();
+	//RabinKarpInterface();
+	mLib::mLibBinaryTreeClassTest();
 	return 0;
 }
