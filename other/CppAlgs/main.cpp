@@ -36,6 +36,8 @@ int main()
 	{
 		genTestDataBinarySearchTreeInterface();
 		TestBinarySearchTreeInterface();
+		TestSplayTreeInterface();
+
 
 		genTestDataAVLTreeInterface();
 		TestAVLTreeInterface();

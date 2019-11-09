@@ -271,7 +271,7 @@ void TestBinarySearchTreeInterface()
 		std::string fileName = fileDir + to_string(i) + ".txt";
 		std::string outName = fileName.substr(0, fileName.size() - 4) + "res.txt";
 		testBinarySearchTree(fileName, outName);
-		std::cout << "mbinary_searchtreeClass insert/remove/inorder test case" << i <<  " OK!" << endl;
+		std::cout << "binary_search tree Class insert/remove/inorder passed test case" << i <<  " !!!" << endl;
 	}
 }
 
@@ -363,6 +363,95 @@ void TestAVLTreeInterface()
 		std::string fileName = fileDir + to_string(i) + ".txt";
 		std::string outName = fileName.substr(0, fileName.size() - 4) + "res.txt";
 		testAVLTree(fileName, outName);
-		std::cout << "mAVLtreeClass insert/remove/inorder test case" << i << " OK!" << endl;
+		std::cout << "AVLtree Class insert/remove/inorder and its properity passed test case" << i << " !!!" << endl;
+	}
+}
+
+/*
+ * 测试自定义Splay树
+ * 输入: (in/out)filename:文件名
+ */
+void testSplayTree(std::string infilename, std::string outfilename)
+{
+	fstream finin;  //覆盖全局std:cin
+	finin.open(infilename, std::ios::in);
+	if (!finin.is_open())
+	{
+		throw std::exception("FATAL ERROR");
+		return;
+	}
+
+	fstream foutin;
+	foutin.open(outfilename, std::ios::in);
+	if (!foutin.is_open())
+	{
+		finin.close();
+		throw std::exception("FATAL ERROR");
+		return;
+	}
+
+	mLib::nmSplayTree<int> nsp;
+	int op, para;
+	int count = 0;
+	while (finin >> op >> para)
+	{
+		count++;
+		int testRes = nsp.checkIfTreeValid();
+		assert((1 == testRes));
+		switch (op)
+		{
+		case 1:
+		{
+			int rightRes;
+			foutin >> rightRes;
+			int testRes = nsp.insert(para);
+			assert(rightRes == testRes);
+			if (testRes == 1)
+			{
+				int testRes2 = nsp.checkIsSplayValid(para);
+				assert((1 == testRes2));
+			}
+			break;
+		}
+		case 2:
+		{
+			int rightRes;
+			foutin >> rightRes;
+			int testRes = nsp.remove(para);
+			assert(rightRes == testRes);
+			break;
+		}
+		case 3:
+		{
+			int rsize;
+			foutin >> rsize;
+			vector<int> rightRes(rsize);
+			for (int i = 0; i < rsize; ++i) foutin >> rightRes[i];
+			vector<int> testRes = nsp.inorder();
+			assert(rightRes == testRes);
+			break;
+		}
+		default:
+			break;
+		}
+	}
+
+	finin.close();
+	foutin.close();
+}
+
+/*
+ * 测试自定义Splay树接口, 关于Splay树性质, 仅测试插入节点后那个节点是否移动到根部
+ */
+void TestSplayTreeInterface()
+{
+	std::string fileDir = "D:\\PC\\GitFiles\\Cpp-STL-test\\other\\CppAlgs\\TestData\\BinaryTreeTest";
+
+	for (int i = 0; i < 10; ++i)
+	{
+		std::string fileName = fileDir + to_string(i) + ".txt";
+		std::string outName = fileName.substr(0, fileName.size() - 4) + "res.txt";
+		testSplayTree(fileName, outName);
+		std::cout << "SplayTree Class insert/remove/inorder and after insert root properity, passed test case" << i << " !!!" << endl;
 	}
 }

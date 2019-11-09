@@ -1123,7 +1123,7 @@ namespace mLib
 		else
 		{
 			if (n->left && n != n->left->parent && n->val <= n->left->val) return false;
-			if (n->right && n != n->right->parent && n->val >= n->left->val) return false;
+			if (n->right && n != n->right->parent && n->val >= n->right->val) return false;
 			return this->checkIfTreeValidpri(n->left) && this->checkIfTreeValidpri(n->right);
 		}
 	}
@@ -1411,7 +1411,157 @@ namespace mLib
 	}
 }
 
+namespace mLib
+{
+	/*
+	 * 自定义splay树
+	 * 元素不可重复
+	 * 内部在中序遍历输出时使用std::vector
+	 * 默认左<中<右, T必须是一个支持二元比较判断的类型
+	 */
+	template<typename T>
+	class nmSplayTree : public nmbinary_searchtree<T>
+	{
+	private:
+		void moveNodeToTop(mLib::nNode<T>* pre);                 //将指定节点移动到根
+	public:
+		bool find(T t);                                       //重载父类方法, 查找值, 找得到则true, 否则false
+		bool insert(T t);                                     //重载父类方法, 插入值, 若已经存在则返回false, 否则插入然后返回true
+		bool remove(T t);                                     //重载父类方法, 删除值, 若已经存在则删除然后返回true, 否则返回false
+		//检查Splay性质是否满足, 应当在树非空时调用, 只检查find/insert后那个新节点是不是根节点以及基本二叉搜索树性质
+		bool checkIsSplayValid(T t);
+	};
 
+	template<typename T>
+	void nmSplayTree<T>::moveNodeToTop(mLib::nNode<T> * pre)
+	{
+		while (this->head != pre)
+		{
+			mLib::nNode<T>* par = pre->parent;
+			mLib::nNode<T>* gra = par->parent;
+			//6种情况具体看配套PPT: SplayTree.pptx
+			if (gra && gra->right == par && par->right == pre)
+			{
+				if (gra->parent && gra->parent->left == gra){
+					gra->parent->left = pre; pre->parent = gra->parent;
+				}
+				else if (gra->parent && gra->parent->right == gra) {
+					gra->parent->right = pre; pre->parent = gra->parent;
+				}
+				else{
+					this->head = pre; pre->parent = nullptr;
+				}
+				par->right = pre->left;  if (pre->left) pre->left->parent = par;
+				gra->right = par->left;  if (par->left) par->left->parent = gra;
+				pre->left = par;  par->parent = pre;
+				par->left = gra;  gra->parent = par;
+			}
+			else if (gra && gra->left == par && par->left == pre) 
+			{
+				if (gra->parent && gra->parent->left == gra) {
+					gra->parent->left = pre; pre->parent = gra->parent;
+				}
+				else if (gra->parent && gra->parent->right == gra) {
+					gra->parent->right = pre; pre->parent = gra->parent;
+				}
+				else {
+					this->head = pre; pre->parent = nullptr;
+				}
+				par->left = pre->right; if (pre->right) pre->right->parent = par;
+				gra->left = par->right; if (par->right) par->right->parent = gra;
+				pre->right = par;  par->parent = pre;
+				par->right = gra;  gra->parent = par;
+			}
+			else if (gra && gra->right == par && par->left == pre)
+			{
+				if (gra->parent && gra->parent->left == gra) {
+					gra->parent->left = pre; pre->parent = gra->parent;
+				}
+				else if (gra->parent && gra->parent->right == gra) {
+					gra->parent->right = pre; pre->parent = gra->parent;
+				}
+				else {
+					this->head = pre; pre->parent = nullptr;
+				}
+				gra->right = pre->left; if (pre->left) pre->left->parent = gra;
+				par->left = pre->right; if (pre->right) pre->right->parent = par;
+				pre->right = par;  par->parent = pre;
+				pre->left = gra;  gra->parent = pre;
+			}
+			else if (gra && gra->left == par && par->right == pre)
+			{
+				if (gra->parent && gra->parent->left == gra) {
+					gra->parent->left = pre; pre->parent = gra->parent;
+				}
+				else if (gra->parent && gra->parent->right == gra) {
+					gra->parent->right = pre; pre->parent = gra->parent;
+				}
+				else {
+					this->head = pre; pre->parent = nullptr;
+				}
+				gra->left = pre->right;  if (pre->right) pre->right->parent = gra;
+				par->right = pre->left;  if (pre->left) pre->left->parent = par;
+				pre->left = par;  par->parent = pre;
+				pre->right = gra;  gra->parent = pre;
+			}
+			else if (par->right == pre)
+			{
+				this->head = pre; pre->parent = nullptr;
+				par->right = pre->left;  if (pre->left) pre->left->parent = par;
+				pre->left = par; par->parent = pre;
+			}
+			else
+			{
+				this->head = pre; pre->parent = nullptr;
+				par->left = pre->right;  if (pre->right) pre->right->parent = par;
+				pre->right = par; par->parent = pre;
+			}
+		}
+	}
+
+	template<typename T>
+	bool nmSplayTree<T>::find(T t)
+	{
+		mLib::nNode<T>* re = this->findinsert(t, this->head);
+		if (re == nullptr || re->val != t) return false;
+		else
+		{
+			this->moveNodeToTop(re);
+			return true;
+		}
+	}
+
+	template<typename T>
+	bool nmSplayTree<T>::insert(T t)
+	{
+		pair<bool, pair<mLib::nNode<T>*, mLib::nNode<T>*>> res = this->insertpri(t, this->head);
+		if (res.first)
+		{
+			this->moveNodeToTop(res.second.second);
+			return true;
+		}
+		else return false;
+	}
+
+	template<typename T>
+	bool nmSplayTree<T>::remove(T t)
+	{
+		pair<bool, mLib::nNode<T>*> res = this->removepri(t, this->head);
+		if (res.first)
+		{
+			if(res.second) this->moveNodeToTop(res.second);
+			return true;
+		}
+		else return false;
+	}
+
+	template<typename T>
+	bool nmSplayTree<T>::checkIsSplayValid(T t)
+	{
+		return this->checkIfTreeValidpri(this->head) && this->head && this->head->val == t;
+	}
+
+}
 
 
 
