@@ -213,13 +213,14 @@ void testBinarySearchTree(std::string infilename, std::string outfilename)
 		return;
 	}
 
-	mLib::mbinary_searchtree<int> mbs;
+	mLib::mbinary_searchtree<int> nmbs;
+	//mLib::nmbinary_searchtree<int> nmbs;
 	int op, para;
 	int count = 0;
 	while (finin >> op >> para)
 	{
 		count++;
-		int testRes = mbs.checkIfTreeValid();
+		int testRes = nmbs.checkIfTreeValid();
 		assert((1 == testRes));
 		switch (op)
 		{
@@ -227,7 +228,7 @@ void testBinarySearchTree(std::string infilename, std::string outfilename)
 		{
 			int rightRes;
 			foutin >> rightRes;
-			int testRes = mbs.insert(para);
+			int testRes = nmbs.insert(para);
 			assert(rightRes == testRes);
 			break;
 		}
@@ -235,7 +236,7 @@ void testBinarySearchTree(std::string infilename, std::string outfilename)
 		{
 			int rightRes;
 			foutin >> rightRes;
-			int testRes = mbs.remove(para);
+			int testRes = nmbs.remove(para);
 			assert(rightRes == testRes);
 			break;
 		}
@@ -245,7 +246,7 @@ void testBinarySearchTree(std::string infilename, std::string outfilename)
 			foutin >> rsize;
 			vector<int> rightRes(rsize);
 			for (int i = 0; i < rsize; ++i) foutin >> rightRes[i];
-			vector<int> testRes = mbs.inorder();
+			vector<int> testRes = nmbs.inorder();
 			assert(rightRes == testRes);
 			break;
 		}
@@ -298,6 +299,7 @@ void testAVLTree(std::string infilename, std::string outfilename)
 	}
 
 	mLib::mAVLtree<int> mAVL;
+	//mLib::nmAVLTree<int> mAVL;
 	int op, para;
 	int count = 0;
 	while (finin >> op >> para)
