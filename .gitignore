@@ -48,6 +48,9 @@ other/CppAlgs/x64/Debug
 other/Debug
 other/x64/Debug
 
+other/CppAlgs/TestData/*.txt
+
+*.enc
 *.idb
 *.pdb
 *.tlog

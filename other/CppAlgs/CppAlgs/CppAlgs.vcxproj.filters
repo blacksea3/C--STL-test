@@ -28,6 +28,9 @@
     <Filter Include="String">
       <UniqueIdentifier>{f40899e3-0417-4639-a32d-465a8d09b0db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TestData">
+      <UniqueIdentifier>{347c3135-86cd-4f37-81f3-996658784778}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Fibonacci\fibonacci.cpp">
@@ -82,6 +85,9 @@
     <ClCompile Include="..\mLib\mLibBinaryTree.cpp">
       <Filter>mLib</Filter>
     </ClCompile>
+    <ClCompile Include="..\TestData\TestData.cpp">
+      <Filter>TestData</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci\fibonacci.hpp">
@@ -131,6 +137,9 @@
     </ClInclude>
     <ClInclude Include="..\mLib\mLibBinaryTree.hpp">
       <Filter>mLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TestData\TestData.hpp">
+      <Filter>TestData</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

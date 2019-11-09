@@ -37,6 +37,7 @@
     <ClCompile Include="..\mLib\mLibvector.cpp" />
     <ClCompile Include="..\Sort\Sort.cpp" />
     <ClCompile Include="..\String\RabinKarp.cpp" />
+    <ClCompile Include="..\TestData\TestData.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\DivideConquer\BinarySearch.hpp" />
@@ -55,6 +56,7 @@
     <ClInclude Include="..\public\public.hpp" />
     <ClInclude Include="..\Sort\Sort.hpp" />
     <ClInclude Include="..\String\RabinKarp.hpp" />
+    <ClInclude Include="..\TestData\TestData.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

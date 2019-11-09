@@ -11,7 +11,8 @@
 //#include "mLib/mLiblist.hpp"
 //#include "mLib/mLibunordered_map.hpp"
 //#include "String/RabinKarp.hpp"
-#include "mLib/mLibBinaryTree.hpp"
+//#include "mLib/mLibBinaryTree.hpp"
+#include "TestData/TestData.hpp"
 
 int main()
 {
@@ -28,6 +29,17 @@ int main()
 	//mLib::mlistClassTest();
 	//mLib::mLibunordered_mapClassTest();
 	//RabinKarpInterface();
-	mLib::mLibBinaryTreeClassTest();
+	//mLib::mLibBinaryTreeClassTest();
+
+	//按以下方法测试二叉树, 先生成随机输入然后测试, 每次都调用一组函数
+	for (int i = 0; i < 10; ++i)
+	{
+		genTestDataBinarySearchTreeInterface();
+		TestBinarySearchTreeInterface();
+
+		genTestDataAVLTreeInterface();
+		TestAVLTreeInterface();
+	}
+
 	return 0;
 }

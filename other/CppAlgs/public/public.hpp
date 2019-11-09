@@ -10,7 +10,8 @@
 #include <unordered_map>
 #include <set>
 #include <unordered_set>
-
+#include <fstream>
+#include <cmath>
 
 #include "time.h"
 #include "estimateFuncTime.hpp"

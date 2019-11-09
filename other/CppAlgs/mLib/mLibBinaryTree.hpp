@@ -7,7 +7,8 @@ namespace mLib
 {
 	/*
 	 * 自定义二叉搜索树
-	 * 内部使用STD::pair
+	 * 元素不可重复
+	 * 内部在中序遍历输出时使用std::vector
 	 * 默认左<中<右, T必须是一个支持二元比较判断的类型
 	 */
 	template<typename T>
@@ -34,7 +35,8 @@ namespace mLib
 		void postorder_del(mbinary_searchtree<T>::Node* n);   //后序遍历, 用于析构函数
 		bool insertpri(T t, mbinary_searchtree<T>::Node* n);  //内部函数插入值, 若已经存在则返回false, 否则插入然后返回true
 		bool removepri(T t, mbinary_searchtree<T>::Node* n);  //内部函数删除值, 若已经存在则删除然后返回true, 否则返回false
-		void inorderpri(mbinary_searchtree<T>::Node* n);      //内部函数中序遍历, 中左右
+		void inorderpri(mbinary_searchtree<T>::Node* n, std::vector<T>& res);      //内部函数中序遍历, 中左右
+		bool checkIfTreeValidpri(mbinary_searchtree<T>::Node* n);          //内部函数测试树性质是否满足
 	public:
 		mbinary_searchtree();                                 //无操作
 		~mbinary_searchtree();                                //后序遍历删除, 左右中
@@ -43,7 +45,8 @@ namespace mLib
 		mLib::mvector<T> RangeSearch(T le, T ri);             //范围查找, 返回值的大小在[le, ri]范围内的值数组
 		bool insert(T t);                                     //插入值, 若已经存在则返回false, 否则插入然后返回true
 		bool remove(T t);                                     //删除值, 若已经存在则删除然后返回true, 否则返回false
-		void inorder();                                       //中序遍历, 中左右
+		std::vector<T> inorder();                             //中序遍历, 中左右
+		bool checkIfTreeValid();                              //测试树性质是否满足
 	};
 
 	template<typename T>
@@ -140,8 +143,8 @@ namespace mLib
 		if (!n) return false;
 		else
 		{
-			mbinary_searchtree<T>::Node* par = nullptr;
-			mbinary_searchtree<T>::Node* pre = this->head;
+			mbinary_searchtree<T>::Node* par = n->parent;
+			mbinary_searchtree<T>::Node* pre = n;
 			while (pre)
 			{
 				if (pre->val > t)
@@ -157,7 +160,15 @@ namespace mLib
 				else
 				{
 					Node* del = pre;
-					if (!pre->left) //左儿子为空
+					bool DirectDelNode = false;
+					if (!pre->left && !pre->right) //左右儿子都空, 直接删
+					{
+						if (!par) this->head = nullptr;
+						else if (par->left == pre) par->left = nullptr;
+						else par->right = nullptr;
+						delete del;
+					}
+					else if (!pre->left) //左儿子为空, 把右儿子移过来
 					{
 						if (par)
 						{
@@ -172,9 +183,14 @@ namespace mLib
 								pre->right->parent = par;
 							}
 						}
-						else this->head = pre->right;
+						else
+						{
+							this->head = pre->right;
+							this->head->parent = nullptr;
+						}
+						delete del;
 					}
-					else if (!pre->right)  //右儿子为空
+					else if (!pre->right)  //右儿子为空, 把左儿子移过来
 					{
 						if (par)
 						{
@@ -189,7 +205,12 @@ namespace mLib
 								pre->left->parent = par;
 							}
 						}
-						else this->head = pre->left;
+						else
+						{
+							this->head = pre->left;
+							this->head->parent = nullptr;
+						}
+						delete del;
 					}
 					else //两儿子都不空, 寻找下一个节点next, 替换过来, 然后删除下一个节点, 注意:下一个节点一定没有左儿子!但可能有右儿子
 					{
@@ -198,20 +219,25 @@ namespace mLib
 						par = pre;
 						while (next->left)
 						{
-							next = next->left;
 							par = next;
+							next = next->left;
 						}
 						pre->val = next->val;
-						//更新待删除的节点
-						if (next->right)
+						//修改next节点相关关系
+						if (next == par->left)
 						{
-							next->val = next->right->val;
-							del = next->right;
+							par->left = next->right;
+							if (next->right) next->right->parent = par;
 						}
-						else del = next;
+						else
+						{
+							par->right = next->right;
+							if (next->right) next->right->parent = par;
+						}
+						del = next;
+						delete del;
 					}
-					delete del;
-					del = nullptr;
+					
 					return true;
 				}
 			}
@@ -220,12 +246,24 @@ namespace mLib
 	}
 
 	template<typename T>
-	void mbinary_searchtree<T>::inorderpri(mbinary_searchtree<T>::Node * n)
+	void mbinary_searchtree<T>::inorderpri(mbinary_searchtree<T>::Node * n, std::vector<T>& res)
 	{
 		if (!n) return;
-		if (n->left) this->inorderpri(n->left);
-		std::cout << n->val << " ";
-		if (n->right) this->inorderpri(n->right);
+		if (n->left) this->inorderpri(n->left, res);
+		res.emplace_back(n->val);
+		if (n->right) this->inorderpri(n->right, res);
+	}
+
+	template<typename T>
+	bool mbinary_searchtree<T>::checkIfTreeValidpri(mbinary_searchtree<T>::Node * n)
+	{
+		if (!n) return true;
+		else
+		{
+			if (n->left && n != n->left->parent && n->val <= n->left->val) return false;
+			if (n->right && n != n->right->parent && n->val >= n->left->val) return false;
+			return this->checkIfTreeValidpri(n->left) && this->checkIfTreeValidpri(n->right);
+		}
 	}
 
 	template<typename T>
@@ -273,9 +311,17 @@ namespace mLib
 	}
 
 	template<typename T>
-	void mbinary_searchtree<T>::inorder()
+	std::vector<T> mbinary_searchtree<T>::inorder()
 	{
-		this->inorderpri(this->head);
+		std::vector<T> res;
+		this->inorderpri(this->head, res);
+		return res;
+	}
+
+	template<typename T>
+	bool mbinary_searchtree<T>::checkIfTreeValid()
+	{
+		return this->checkIfTreeValidpri(this->head);
 	}
 
 	void mLibBinaryTreeClassTest();
@@ -285,7 +331,8 @@ namespace mLib
 {
 	/*
 	 * 自定义AVL树，自适应二叉搜索树
-	 * 内部使用STD::pair
+	 * 元素不可重复
+	 * 内部在中序遍历输出时使用std::vector
 	 * 默认左<中<右, T必须是一个支持二元比较判断的类型
 	 */
 	template<typename T>
@@ -298,7 +345,7 @@ namespace mLib
 			Node* left;
 			Node* right;
 			Node* parent;
-			Node* height;
+			int height;
 			Node(T v)
 			{
 				val = v;
@@ -313,7 +360,7 @@ namespace mLib
 		void postorder_del(mAVLtree<T>::Node* n);   //后序遍历, 用于析构函数
 		bool insertpri(T t, mAVLtree<T>::Node* n);  //内部函数插入值, 若已经存在则返回false, 否则插入然后返回true
 		bool removepri(T t, mAVLtree<T>::Node* n);  //内部函数删除值, 若已经存在则删除然后返回true, 否则返回false
-		void inorderpri(mAVLtree<T>::Node* n);      //内部函数中序遍历, 中左右
+		void inorderpri(mAVLtree<T>::Node* n, std::vector<T>& res);      //内部函数中序遍历, 中左右
 
 		void leftRotate(mAVLtree<T>::Node* par, mAVLtree<T>::Node* son);        //左旋
 		void rightRotate(mAVLtree<T>::Node* par, mAVLtree<T>::Node* son);       //右旋
@@ -321,8 +368,11 @@ namespace mLib
 		void rightleftRotate(mAVLtree<T>::Node* par, mAVLtree<T>::Node* son);   //右左旋
 
 		void updateHeight(mAVLtree<T>::Node* n);    //更新高度
-		void getHeight(mAVLtree<T>::Node* n);       //获取高度，如果是空指针那么就是0，否则是节点的高度
-		void makeAVLValid(mAVLtree<T>::Node* par, mAVLtree<T>::Node* pre);   //使AVL性质满足
+		int getHeight(mAVLtree<T>::Node* n);       //获取高度，如果是空指针那么就是0，否则是节点的高度
+		void makeAVLValidIterFunc(mAVLtree<T>::Node* par, mAVLtree<T>::Node* pre);   //函数内部迭代自底向上修复AVL性质
+
+		mAVLtree<T>::Node* makeAVLValid(mAVLtree<T>::Node* par, mAVLtree<T>::Node* pre);   //使AVL性质满足, 返回性质满足后的父亲节点
+		bool checkIfAVLValidpri(mAVLtree<T>::Node* n);                //内部函数测试AVL性质是否满足
 
 	public:
 		mAVLtree();                                 //无操作
@@ -332,7 +382,8 @@ namespace mLib
 		mLib::mvector<T> RangeSearch(T le, T ri);             //范围查找, 返回值的大小在[le, ri]范围内的值数组
 		bool insert(T t);                                     //插入值, 若已经存在则返回false, 否则插入然后返回true
 		bool remove(T t);                                     //删除值, 若已经存在则删除然后返回true, 否则返回false
-		void inorder();                                       //中序遍历, 中左右
+		std::vector<T> inorder();                             //中序遍历, 中左右
+		bool checkIfAVLValid();                                  //测试AVL性质是否满足
 	};
 
 	template<typename T>
@@ -424,15 +475,7 @@ namespace mLib
 			}
 			//然后调整位置, 现在par是父亲节点, pre是新插入的节点(子节点)
 			//以父亲节点为子节点，父亲的父亲节点为父亲节点，自下而上更新二叉树以满足高度关系
-			while (par)
-			{
-				this->updateHeight(pre);
-				this->updateHeight(par);
-				this->makeAVLValid(par, pre);
-				pre = par;
-				par = par->parent;
-			}
-			this->updateHeight(pre);
+			this->makeAVLValidIterFunc(par, pre);
 			return true;
 		}
 	}
@@ -444,8 +487,8 @@ namespace mLib
 		else
 		{
 			//先按二叉搜索树的删除方法删除一个节点
-			mAVLtree<T>::Node* par = nullptr;
-			mAVLtree<T>::Node* pre = this->head;
+			mAVLtree<T>::Node* par = n->parent;
+			mAVLtree<T>::Node* pre = n;
 			while (pre)
 			{
 				if (pre->val > t)
@@ -461,7 +504,15 @@ namespace mLib
 				else
 				{
 					Node* del = pre;
-					if (!pre->left) //左儿子为空
+					bool DirectDelNode = false;
+					if (!pre->left && !pre->right) //左右儿子都空, 直接删
+					{
+						if (!par) this->head = nullptr;
+						else if (par->left == pre) par->left = nullptr;
+						else par->right = nullptr;
+						delete del;
+					}
+					else if (!pre->left) //左儿子为空, 把右儿子移过来
 					{
 						if (par)
 						{
@@ -476,9 +527,14 @@ namespace mLib
 								pre->right->parent = par;
 							}
 						}
-						else this->head = pre->right;
+						else
+						{
+							this->head = pre->right;
+							this->head->parent = nullptr;
+						}
+						delete del;
 					}
-					else if (!pre->right)  //右儿子为空
+					else if (!pre->right)  //右儿子为空, 把左儿子移过来
 					{
 						if (par)
 						{
@@ -493,7 +549,12 @@ namespace mLib
 								pre->left->parent = par;
 							}
 						}
-						else this->head = pre->left;
+						else
+						{
+							this->head = pre->left;
+							this->head->parent = nullptr;
+						}
+						delete del;
 					}
 					else //两儿子都不空, 寻找下一个节点next, 替换过来, 然后删除下一个节点, 注意:下一个节点一定没有左儿子!但可能有右儿子
 					{
@@ -506,31 +567,33 @@ namespace mLib
 							next = next->left;
 						}
 						pre->val = next->val;
-						//更新待删除的节点
-						if (next->right)
+						//修改next节点相关关系
+						if (next == par->left)
 						{
-							next->val = next->right->val;
-							del = next->right;
-							par = next;
+							par->left = next->right;
+							if (next->right) next->right->parent = par;
 						}
-						else del = next;
+						else
+						{
+							par->right = next->right;
+							if (next->right) next->right->parent = par;
+						}
+						del = next;
+						delete del;
 					}
-					delete del;
-					del = nullptr;
-
 					//然后调整位置, 现在par是被删除节点的父亲节点
-					pre = par;
-					par = par->parent;
-
-					while (par)
+					//如果par为空说明树被删除没了, 不操作
+					if (!par);
+					else if (par->left)  //把父亲节点作为par, 儿子节点作为另一个未删除的儿子(如果有的话), 检查AVL性质
+						this->makeAVLValidIterFunc(par, par->left);
+					else if (par->right)
+						this->makeAVLValidIterFunc(par, par->right);
+					else  //否则, 父亲节点作为pre, 父亲的父亲节点作为par, 检查AVL性质
 					{
-						this->updateHeight(pre);
-						this->updateHeight(par);
-						this->makeAVLValid(par, pre);
 						pre = par;
 						par = par->parent;
+						this->makeAVLValidIterFunc(par, pre);
 					}
-					this->updateHeight(pre);
 					return true;
 				}
 			}
@@ -539,27 +602,27 @@ namespace mLib
 	}
 
 	template<typename T>
-	void mAVLtree<T>::inorderpri(mAVLtree<T>::Node * n)
+	void mAVLtree<T>::inorderpri(mAVLtree<T>::Node * n, std::vector<T>& res)
 	{
 		if (!n) return;
-		if (n->left) this->inorderpri(n->left);
-		std::cout << n->val << " ";
-		if (n->right) this->inorderpri(n->right);
+		if (n->left) this->inorderpri(n->left, res);
+		res.emplace_back(n->val);
+		if (n->right) this->inorderpri(n->right, res);
 	}
 
 	template<typename T>
-	void mAVLtree<T>::leftRotate(mAVLtree<T>::Node * par, mAVLtree<T>::Node * son)
+	void mAVLtree<T>::leftRotate(mAVLtree<T>::Node * par, mAVLtree<T>::Node * pre)
 	{
 		//预处理
 		Node* gra = par->parent;
 		bool GraOccur = (gra) ? true : false;
-		bool GraLeft = (gra && gre->left == par) ? true : false;
+		bool GraLeft = (gra && gra->left == par) ? true : false;
 		//拆开父亲和右儿子
 		par->right = pre->left;
-		pre->left->parent = par;
+		if (pre->left) pre->left->parent = par;
 		//反转父亲和右儿子的关系
 		pre->left = par;
-		par->parent = pre->left;
+		par->parent = pre;
 		//后处理
 		this->updateHeight(par);
 		this->updateHeight(pre);
@@ -582,18 +645,18 @@ namespace mLib
 	}
 
 	template<typename T>
-	void mAVLtree<T>::rightRotate(mAVLtree<T>::Node * par, mAVLtree<T>::Node * son)
+	void mAVLtree<T>::rightRotate(mAVLtree<T>::Node * par, mAVLtree<T>::Node * pre)
 	{
 		//预处理
 		Node* gra = par->parent;
 		bool GraOccur = (gra) ? true : false;
-		bool GraLeft = (gra && gre->left == par) ? true : false;
+		bool GraLeft = (gra && gra->left == par) ? true : false;
 		//拆开父亲和左儿子
 		par->left = pre->right;
-		pre->right->parent = par;
+		if (pre->right) pre->right->parent = par;
 		//反转父亲和左儿子的关系
 		pre->right = par;
-		par->parent = pre->right;
+		par->parent = pre;
 		//后处理
 		this->updateHeight(par);
 		this->updateHeight(pre);
@@ -615,46 +678,85 @@ namespace mLib
 	}
 
 	template<typename T>
-	void mAVLtree<T>::leftrightRotate(mAVLtree<T>::Node * par, mAVLtree<T>::Node * son)
+	void mAVLtree<T>::leftrightRotate(mAVLtree<T>::Node * par, mAVLtree<T>::Node * pre)
 	{
 		//先左旋后右旋
-		this->leftRotate(pre->right, pre);
-		this->rightRotate(pre->parent, par);
+		this->leftRotate(pre, pre->right);
+		this->rightRotate(par, pre->parent);
 	}
 
 	template<typename T>
-	void mAVLtree<T>::rightleftRotate(mAVLtree<T>::Node * par, mAVLtree<T>::Node * son)
+	void mAVLtree<T>::rightleftRotate(mAVLtree<T>::Node * par, mAVLtree<T>::Node * pre)
 	{
-		this->rightRotate(pre->left, pre);
-		this->leftRotate(pre->parent, par);
+		this->rightRotate(pre, pre->left);
+		this->leftRotate(par, pre->parent);
 	}
 
 	template<typename T>
 	void mAVLtree<T>::updateHeight(mAVLtree<T>::Node * n)
 	{
-		n->height = max(this->getHeight(n->left), this->getHeight(n->right));
+		if (n) n->height = std::max(this->getHeight(n->left), this->getHeight(n->right)) + 1;
 	}
 
 	template<typename T>
-	void mAVLtree<T>::getHeight(mAVLtree<T>::Node * n)
+	int mAVLtree<T>::getHeight(mAVLtree<T>::Node * n)
 	{
 		return (n) ? n->height : 0;
 	}
 
 	template<typename T>
-	void mAVLtree<T>::makeAVLValid(mAVLtree<T>::Node * par, mAVLtree<T>::Node * pre)
+	void mAVLtree<T>::makeAVLValidIterFunc(mAVLtree<T>::Node * par, mAVLtree<T>::Node * pre)
 	{
-		if (par->right->height > (par->left->height + 1))
+		while (par)
 		{
-			if (pre->right->height > pre->left->height) this->leftRotate(par, pre);
-			else if (pre->right->height < pre->left->height) this->rightleftRotate(par, pre);
-			else throw "alg bug happened in mAVLtree::makeAVLValid(when called func:insertpri)";
+			this->updateHeight(pre);
+			this->updateHeight(par);
+		    pre = this->makeAVLValid(par, pre);
+			par = pre->parent;
 		}
-		else if (par->left->height > (par->right->height + 1))
+		this->updateHeight(pre);
+	}
+
+	template<typename T>
+	typename mAVLtree<T>::Node* mAVLtree<T>::makeAVLValid(mAVLtree<T>::Node * par, mAVLtree<T>::Node * pre)
+	{
+		int parrRight = this->getHeight(par->right);
+		int parlRight = this->getHeight(par->left);
+
+		if (parrRight > (parlRight + 1))
 		{
-			if (pre->left->height > pre->right->height) this->rightRotate(par, pre);
-			else if (pre->left->height < pre->right->height) this->leftrightRotate(par, pre);
+			//此处需要校准pre, 这是因为如果递归修改高度(例如删除操作中的), 可能导致当前pre是par的矮树
+			pre = par->right;
+			int prerRight = this->getHeight(pre->right);
+			int prelRight = this->getHeight(pre->left);
+			if (prerRight >= prelRight) this->leftRotate(par, pre);
+			else if (prerRight < prelRight) this->rightleftRotate(par, pre);
 			else throw "alg bug happened in mAVLtree::makeAVLValid(when called func:insertpri)";
+			return par->parent;
+		}
+		else if (parlRight > (parrRight + 1))
+		{
+			pre = par->left;
+			int prerRight = this->getHeight(pre->right);
+			int prelRight = this->getHeight(pre->left);
+			if (prelRight >= prerRight) this->rightRotate(par, pre);
+			else if (prelRight < prerRight) this->leftrightRotate(par, pre);
+			else throw "alg bug happened in mAVLtree::makeAVLValid(when called func:insertpri)";
+			return par->parent;
+		}
+		return par;
+	}
+
+	template<typename T>
+	bool mAVLtree<T>::checkIfAVLValidpri(mAVLtree<T>::Node * n)
+	{
+		if (!n) return true;
+		else
+		{
+			if (n->left && n != n->left->parent && n->val <= n->left->val) return false;
+			if (n->right && n != n->right->parent && n->val >= n->left->val) return false;
+			if (abs(this->getHeight(n->left) - this->getHeight(n->right)) > 1) return false;
+			else return this->checkIfAVLValidpri(n->left) && this->checkIfAVLValidpri(n->right);
 		}
 	}
 
@@ -703,10 +805,17 @@ namespace mLib
 	}
 
 	template<typename T>
-	void mAVLtree<T>::inorder()
+	std::vector<T> mAVLtree<T>::inorder()
 	{
-		this->inorderpri(this->head);
+		std::vector<T> res;
+		this->inorderpri(this->head, res);
+		return res;
 	}
 
+	template<typename T>
+	bool mAVLtree<T>::checkIfAVLValid()
+	{
+		return this->checkIfAVLValidpri(this->head);
+	}
 }
 
