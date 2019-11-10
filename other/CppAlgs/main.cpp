@@ -32,15 +32,16 @@ int main()
 	//mLib::mLibBinaryTreeClassTest();
 
 	//按以下方法测试二叉树, 先生成随机输入然后测试, 每次都调用一组函数
-	for (int i = 0; i < 1; ++i)
+	for (int i = 0; i < 10; ++i)
 	{
 		genTestDataBinarySearchTreeInterface();
-		TestBinarySearchTreeInterface();
-		TestSplayTreeInterface();
+		TestRedBlackTreeInterface();
+		
+		//TestBinarySearchTreeInterface();
+		//TestSplayTreeInterface();
 
-
-		genTestDataAVLTreeInterface();
-		TestAVLTreeInterface();
+		//genTestDataAVLTreeInterface();
+		//TestAVLTreeInterface();
 	}
 
 	return 0;

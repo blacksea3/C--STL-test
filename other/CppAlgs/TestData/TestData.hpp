@@ -5,3 +5,4 @@ void TestBinarySearchTreeInterface();
 void genTestDataAVLTreeInterface();
 void TestAVLTreeInterface();
 void TestSplayTreeInterface();
+void TestRedBlackTreeInterface();

@@ -455,3 +455,91 @@ void TestSplayTreeInterface()
 		std::cout << "SplayTree Class insert/remove/inorder and after insert root properity, passed test case" << i << " !!!" << endl;
 	}
 }
+
+/*
+ * 测试自定义RedBlack树
+ * 输入: (in/out)filename:文件名
+ */
+void testRedBlackTree(std::string infilename, std::string outfilename)
+{
+	fstream finin;  //覆盖全局std:cin
+	finin.open(infilename, std::ios::in);
+	if (!finin.is_open())
+	{
+		throw std::exception("FATAL ERROR");
+		return;
+	}
+
+	fstream foutin;
+	foutin.open(outfilename, std::ios::in);
+	if (!foutin.is_open())
+	{
+		finin.close();
+		throw std::exception("FATAL ERROR");
+		return;
+	}
+
+	mLib::mRedBlackTree<int> mrb;
+	int op, para;
+	int count = 0;
+	while (finin >> op >> para)
+	{
+		count++;
+		if (count == 421)
+			int i = 1;
+		switch (op)
+		{
+		case 1:
+		{
+			int rightRes;
+			foutin >> rightRes;
+			int testRes = mrb.insert(para);
+			assert(rightRes == testRes);
+			testRes = mrb.checkIsRedBlackValid();
+			assert((1 == testRes));
+			break;
+		}
+		case 2:
+		{
+			int rightRes;
+			foutin >> rightRes;
+			int testRes = mrb.remove(para);
+			assert(rightRes == testRes);
+			testRes = mrb.checkIsRedBlackValid();
+			assert((1 == testRes));
+			break;
+		}
+		case 3:
+		{
+			int rsize;
+			foutin >> rsize;
+			vector<int> rightRes(rsize);
+			for (int i = 0; i < rsize; ++i) foutin >> rightRes[i];
+			vector<int> testRes = mrb.inorder();
+			assert(rightRes == testRes);
+			break;
+		}
+		default:
+			break;
+		}
+	}
+
+	finin.close();
+	foutin.close();
+}
+
+/*
+ * 测试自定义红黑树接口
+ */
+void TestRedBlackTreeInterface()
+{
+	std::string fileDir = "D:\\PC\\GitFiles\\Cpp-STL-test\\other\\CppAlgs\\TestData\\BinaryTreeTest";
+
+	for (int i = 0; i < 10; ++i)
+	{
+		std::string fileName = fileDir + to_string(i) + ".txt";
+		std::string outName = fileName.substr(0, fileName.size() - 4) + "res.txt";
+		testRedBlackTree(fileName, outName);
+		std::cout << "RedBlackTree Class insert/remove/inorder and its properity, passed test case" << i << " !!!" << endl;
+	}
+}
