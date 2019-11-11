@@ -88,7 +88,7 @@ void genTestDataBinaryTree(int opStart, int opEnd, int paraStart, int paraEnd, i
  */
 void genOutputDataBinaryTree(std::string infilename, std::string outfilename)
 {
-	fstream fin;  //¸²¸ÇÈ«¾Östd:cin
+	fstream fin;
 	fin.open(infilename, std::ios::in);
 	if (!fin.is_open())
 	{

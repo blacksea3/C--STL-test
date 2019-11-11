@@ -85,7 +85,13 @@
     <ClCompile Include="..\mLib\mLibBinaryTree.cpp">
       <Filter>mLib</Filter>
     </ClCompile>
-    <ClCompile Include="..\TestData\TestData.cpp">
+    <ClCompile Include="..\String\Trie.cpp">
+      <Filter>String</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TestData\TestTreeData.cpp">
+      <Filter>TestData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TestData\TestStringData.cpp">
       <Filter>TestData</Filter>
     </ClCompile>
   </ItemGroup>
@@ -138,7 +144,13 @@
     <ClInclude Include="..\mLib\mLibBinaryTree.hpp">
       <Filter>mLib</Filter>
     </ClInclude>
-    <ClInclude Include="..\TestData\TestData.hpp">
+    <ClInclude Include="..\String\Trie.hpp">
+      <Filter>String</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TestData\TestTreeData.hpp">
+      <Filter>TestData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TestData\TestStringData.hpp">
       <Filter>TestData</Filter>
     </ClInclude>
   </ItemGroup>

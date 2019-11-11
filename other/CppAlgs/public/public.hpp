@@ -12,6 +12,9 @@
 #include <unordered_set>
 #include <fstream>
 #include <cmath>
+#include <array>
+#include <stack>
+#include <queue>
 
 #include "time.h"
 #include "estimateFuncTime.hpp"

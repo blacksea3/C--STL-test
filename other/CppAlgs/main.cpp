@@ -12,7 +12,8 @@
 //#include "mLib/mLibunordered_map.hpp"
 //#include "String/RabinKarp.hpp"
 //#include "mLib/mLibBinaryTree.hpp"
-#include "TestData/TestData.hpp"
+//#include "TestData/TestTreeData.hpp"
+#include "TestData/TestStringData.hpp"
 
 int main()
 {
@@ -31,12 +32,14 @@ int main()
 	//RabinKarpInterface();
 	//mLib::mLibBinaryTreeClassTest();
 
-	//按以下方法测试二叉树, 先生成随机输入然后测试, 每次都调用一组函数
+	//按以下方法测试二叉树/字典树, 先生成随机输入然后测试, 每次都调用一组函数
 	for (int i = 0; i < 10; ++i)
 	{
-		genTestDataBinarySearchTreeInterface();
-		TestRedBlackTreeInterface();
-		
+		GenTrieTestDataInterface();
+		TrieClassTestInterface();
+
+		//genTestDataBinarySearchTreeInterface();
+		//TestRedBlackTreeInterface();
 		//TestBinarySearchTreeInterface();
 		//TestSplayTreeInterface();
 
