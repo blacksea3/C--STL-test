@@ -15,7 +15,8 @@
 //#include "TestData/TestTreeData.hpp"
 //#include "TestData/TestStringData.hpp"
 //#include "String/BWT.hpp"
-#include "String/Trie.hpp"
+//#include "String/Trie.hpp"
+#include "String/KMP.hpp"
 
 int main()
 {
@@ -50,7 +51,8 @@ int main()
 	//}
 
 	//BWTconversionTest();
-    SuffixTriePatternMatchingTest();
+    //SuffixTriePatternMatchingTest();
+	KMPtest();
 
 	return 0;
 }

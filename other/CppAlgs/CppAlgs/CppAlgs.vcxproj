@@ -37,6 +37,7 @@
     <ClCompile Include="..\mLib\mLibvector.cpp" />
     <ClCompile Include="..\Sort\Sort.cpp" />
     <ClCompile Include="..\String\BWT.cpp" />
+    <ClCompile Include="..\String\KMP.cpp" />
     <ClCompile Include="..\String\RabinKarp.cpp" />
     <ClCompile Include="..\String\Trie.cpp" />
     <ClCompile Include="..\TestData\TestStringData.cpp" />
@@ -59,6 +60,7 @@
     <ClInclude Include="..\public\public.hpp" />
     <ClInclude Include="..\Sort\Sort.hpp" />
     <ClInclude Include="..\String\BWT.hpp" />
+    <ClInclude Include="..\String\KMP.hpp" />
     <ClInclude Include="..\String\RabinKarp.hpp" />
     <ClInclude Include="..\String\Trie.hpp" />
     <ClInclude Include="..\TestData\TestStringData.hpp" />

@@ -97,6 +97,9 @@
     <ClCompile Include="..\String\BWT.cpp">
       <Filter>String</Filter>
     </ClCompile>
+    <ClCompile Include="..\String\KMP.cpp">
+      <Filter>String</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci\fibonacci.hpp">
@@ -157,6 +160,9 @@
       <Filter>TestData</Filter>
     </ClInclude>
     <ClInclude Include="..\String\BWT.hpp">
+      <Filter>String</Filter>
+    </ClInclude>
+    <ClInclude Include="..\String\KMP.hpp">
       <Filter>String</Filter>
     </ClInclude>
   </ItemGroup>
