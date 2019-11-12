@@ -13,7 +13,9 @@
 //#include "String/RabinKarp.hpp"
 //#include "mLib/mLibBinaryTree.hpp"
 //#include "TestData/TestTreeData.hpp"
-#include "TestData/TestStringData.hpp"
+//#include "TestData/TestStringData.hpp"
+//#include "String/BWT.hpp"
+#include "String/Trie.hpp"
 
 int main()
 {
@@ -33,10 +35,10 @@ int main()
 	//mLib::mLibBinaryTreeClassTest();
 
 	//按以下方法测试二叉树/字典树, 先生成随机输入然后测试, 每次都调用一组函数
-	for (int i = 0; i < 10; ++i)
-	{
-		GenTrieTestDataInterface();
-		TrieClassTestInterface();
+	//for (int i = 0; i < 10; ++i)
+	//{
+		//GenTrieTestDataInterface();
+		//TrieClassTestInterface();
 
 		//genTestDataBinarySearchTreeInterface();
 		//TestRedBlackTreeInterface();
@@ -45,7 +47,10 @@ int main()
 
 		//genTestDataAVLTreeInterface();
 		//TestAVLTreeInterface();
-	}
+	//}
+
+	//BWTconversionTest();
+    SuffixTriePatternMatchingTest();
 
 	return 0;
 }
