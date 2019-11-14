@@ -5,7 +5,7 @@
  * 输入std::string raw
  * 输出对每个字符排序后的结果，放入数组，从前到后分别是源字符的下标位
  */
-std::vector<size_t> SortCharacters(std::string raw)
+std::vector<size_t> SortCharacters(std::string const& raw)
 {
 	size_t rSize = raw.size();
 	std::vector<size_t> order(rSize, 0);
@@ -15,7 +15,7 @@ std::vector<size_t> SortCharacters(std::string raw)
 	for (int i = rSize - 1; i >= 0; --i)
 	{
 		char ch = raw[i];
-		count[ch]--; 
+		count[ch]--;
 		order[count[ch]] = i;
 	}
 	return order;
@@ -26,7 +26,7 @@ std::vector<size_t> SortCharacters(std::string raw)
  * 输入std::string raw字符串，std::vector<size_t> 排序
  * 输出类别数组
  */
-std::vector<size_t> ComputeCharClasses(std::string raw, std::vector<size_t> order)
+std::vector<size_t> ComputeCharClasses(std::string const& raw, std::vector<size_t> const& order)
 {
 	size_t rSize = raw.size();
 	std::vector<size_t> classes(rSize, 0);
@@ -43,7 +43,7 @@ std::vector<size_t> ComputeCharClasses(std::string raw, std::vector<size_t> orde
  * 输入std::string raw字符串，size_t L排序对应长度，std::vector<size_t> order排序，std::vector<size_t> classes字符类别分组
  * 输出双倍长度2*L排序数组
  */
-std::vector<size_t> SortDoubled(std::string raw, size_t L, std::vector<size_t> order, std::vector<size_t> classes)
+std::vector<size_t> SortDoubled(std::string const& raw, size_t L, std::vector<size_t> const& order, std::vector<size_t> const& classes)
 {
 	//需要使用稳定排序  
 	size_t rSize = raw.size();
@@ -66,7 +66,7 @@ std::vector<size_t> SortDoubled(std::string raw, size_t L, std::vector<size_t> o
  * 输入size_t L排序对应长度，std::vector<size_t> order排序，std::vector<size_t> classes旧字符类别分组
  * 输出新字符类别分组
  */
-std::vector<size_t> UpdateClasses(size_t L, std::vector<size_t> order, std::vector<size_t> classes)
+std::vector<size_t> UpdateClasses(size_t L, std::vector<size_t> const& order, std::vector<size_t> const& classes)
 {
 	size_t rSize = order.size();
 	std::vector<size_t> newClasses(rSize, 0);
