@@ -100,6 +100,9 @@
     <ClCompile Include="..\String\KMP.cpp">
       <Filter>String</Filter>
     </ClCompile>
+    <ClCompile Include="..\String\SuffixArray.cpp">
+      <Filter>String</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci\fibonacci.hpp">
@@ -163,6 +166,9 @@
       <Filter>String</Filter>
     </ClInclude>
     <ClInclude Include="..\String\KMP.hpp">
+      <Filter>String</Filter>
+    </ClInclude>
+    <ClInclude Include="..\String\SuffixArray.hpp">
       <Filter>String</Filter>
     </ClInclude>
   </ItemGroup>

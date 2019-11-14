@@ -39,6 +39,7 @@
     <ClCompile Include="..\String\BWT.cpp" />
     <ClCompile Include="..\String\KMP.cpp" />
     <ClCompile Include="..\String\RabinKarp.cpp" />
+    <ClCompile Include="..\String\SuffixArray.cpp" />
     <ClCompile Include="..\String\Trie.cpp" />
     <ClCompile Include="..\TestData\TestStringData.cpp" />
     <ClCompile Include="..\TestData\TestTreeData.cpp" />
@@ -62,6 +63,7 @@
     <ClInclude Include="..\String\BWT.hpp" />
     <ClInclude Include="..\String\KMP.hpp" />
     <ClInclude Include="..\String\RabinKarp.hpp" />
+    <ClInclude Include="..\String\SuffixArray.hpp" />
     <ClInclude Include="..\String\Trie.hpp" />
     <ClInclude Include="..\TestData\TestStringData.hpp" />
     <ClInclude Include="..\TestData\TestTreeData.hpp" />

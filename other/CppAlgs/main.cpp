@@ -16,7 +16,8 @@
 //#include "TestData/TestStringData.hpp"
 //#include "String/BWT.hpp"
 //#include "String/Trie.hpp"
-#include "String/KMP.hpp"
+//#include "String/KMP.hpp"
+#include "String/SuffixArray.hpp"
 
 int main()
 {
@@ -52,7 +53,8 @@ int main()
 
 	//BWTconversionTest();
     //SuffixTriePatternMatchingTest();
-	KMPtest();
+	//KMPtest();
+	SuffixArrayTest();
 
 	return 0;
 }
