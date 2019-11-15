@@ -118,6 +118,9 @@
     <ClCompile Include="..\Graph\strongConnectedComponents.cpp">
       <Filter>Graph</Filter>
     </ClCompile>
+    <ClCompile Include="..\Graph\BFS.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci\fibonacci.hpp">
@@ -196,6 +199,9 @@
       <Filter>Graph</Filter>
     </ClInclude>
     <ClInclude Include="..\Graph\strongConnectedComponents.hpp">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graph\BFS.hpp">
       <Filter>Graph</Filter>
     </ClInclude>
   </ItemGroup>

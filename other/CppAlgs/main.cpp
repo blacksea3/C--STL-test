@@ -21,7 +21,8 @@
 //#include "Graph/graphMain.hpp"
 //#include "mLib/mLibSimplifyBinaryTree.hpp"
 //#include "Graph/topologicalSort.hpp"
-#include "Graph/strongConnectedComponents.hpp"
+//#include "Graph/strongConnectedComponents.hpp"
+#include "Graph/BFS.hpp"
 
 int main()
 {
@@ -62,7 +63,8 @@ int main()
 	//graphMainInterface();
 	//msp_searchtreeTest();
 	//topologicalSortTest();
-	sCCsTest();
+	//sCCsTest();
+	BFSTest();
 
 	return 0;
 }
