@@ -19,7 +19,9 @@
 //#include "String/KMP.hpp"
 //#include "String/SuffixArray.hpp"
 //#include "Graph/graphMain.hpp"
-#include "mLib/mLibSimplifyBinaryTree.hpp"
+//#include "mLib/mLibSimplifyBinaryTree.hpp"
+//#include "Graph/topologicalSort.hpp"
+#include "Graph/strongConnectedComponents.hpp"
 
 int main()
 {
@@ -58,7 +60,9 @@ int main()
 	//KMPtest();
 	//SuffixArrayTest();
 	//graphMainInterface();
-	msp_searchtreeTest();
+	//msp_searchtreeTest();
+	//topologicalSortTest();
+	sCCsTest();
 
 	return 0;
 }

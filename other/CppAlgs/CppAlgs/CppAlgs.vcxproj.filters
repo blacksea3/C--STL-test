@@ -112,6 +112,12 @@
     <ClCompile Include="..\mLib\mLibSimplifyBinaryTree.cpp">
       <Filter>mLib</Filter>
     </ClCompile>
+    <ClCompile Include="..\Graph\topologicalSort.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Graph\strongConnectedComponents.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci\fibonacci.hpp">
@@ -185,6 +191,12 @@
     </ClInclude>
     <ClInclude Include="..\mLib\mLibSimplifyBinaryTree.hpp">
       <Filter>mLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graph\topologicalSort.hpp">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graph\strongConnectedComponents.hpp">
+      <Filter>Graph</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
