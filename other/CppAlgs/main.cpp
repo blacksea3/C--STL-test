@@ -17,7 +17,8 @@
 //#include "String/BWT.hpp"
 //#include "String/Trie.hpp"
 //#include "String/KMP.hpp"
-#include "String/SuffixArray.hpp"
+//#include "String/SuffixArray.hpp"
+#include "Graph/graphMain.hpp"
 
 int main()
 {
@@ -54,7 +55,8 @@ int main()
 	//BWTconversionTest();
     //SuffixTriePatternMatchingTest();
 	//KMPtest();
-	SuffixArrayTest();
+	//SuffixArrayTest();
+	graphMainInterface();
 
 	return 0;
 }

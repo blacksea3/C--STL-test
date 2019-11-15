@@ -31,6 +31,9 @@
     <Filter Include="TestData">
       <UniqueIdentifier>{347c3135-86cd-4f37-81f3-996658784778}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Graph">
+      <UniqueIdentifier>{76c482e0-9860-49eb-b70e-bed86ce586bb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Fibonacci\fibonacci.cpp">
@@ -103,6 +106,9 @@
     <ClCompile Include="..\String\SuffixArray.cpp">
       <Filter>String</Filter>
     </ClCompile>
+    <ClCompile Include="..\Graph\graphMain.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci\fibonacci.hpp">
@@ -170,6 +176,9 @@
     </ClInclude>
     <ClInclude Include="..\String\SuffixArray.hpp">
       <Filter>String</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graph\graphMain.hpp">
+      <Filter>Graph</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

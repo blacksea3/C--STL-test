@@ -26,6 +26,7 @@
     <ClCompile Include="..\DynamicProgramming\Knapsack.cpp" />
     <ClCompile Include="..\DynamicProgramming\PlaceParentheses.cpp" />
     <ClCompile Include="..\Fibonacci\fibonacci.cpp" />
+    <ClCompile Include="..\Graph\graphMain.cpp" />
     <ClCompile Include="..\Greedy\MinRefills.cpp" />
     <ClCompile Include="..\main.cpp" />
     <ClCompile Include="..\mGCD\mGCD.cpp" />
@@ -48,6 +49,7 @@
     <ClInclude Include="..\DivideConquer\BinarySearch.hpp" />
     <ClInclude Include="..\DivideConquer\PolyMul.hpp" />
     <ClInclude Include="..\Fibonacci\fibonacci.hpp" />
+    <ClInclude Include="..\Graph\graphMain.hpp" />
     <ClInclude Include="..\Greedy\MinRefills.hpp" />
     <ClInclude Include="..\mGCD\mGCD.hpp" />
     <ClInclude Include="..\mLib\mLibalgorithm.hpp" />
