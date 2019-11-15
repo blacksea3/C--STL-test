@@ -18,7 +18,8 @@
 //#include "String/Trie.hpp"
 //#include "String/KMP.hpp"
 //#include "String/SuffixArray.hpp"
-#include "Graph/graphMain.hpp"
+//#include "Graph/graphMain.hpp"
+#include "mLib/mLibSimplifyBinaryTree.hpp"
 
 int main()
 {
@@ -56,7 +57,8 @@ int main()
     //SuffixTriePatternMatchingTest();
 	//KMPtest();
 	//SuffixArrayTest();
-	graphMainInterface();
+	//graphMainInterface();
+	msp_searchtreeTest();
 
 	return 0;
 }

@@ -109,6 +109,9 @@
     <ClCompile Include="..\Graph\graphMain.cpp">
       <Filter>Graph</Filter>
     </ClCompile>
+    <ClCompile Include="..\mLib\mLibSimplifyBinaryTree.cpp">
+      <Filter>mLib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci\fibonacci.hpp">
@@ -179,6 +182,9 @@
     </ClInclude>
     <ClInclude Include="..\Graph\graphMain.hpp">
       <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mLib\mLibSimplifyBinaryTree.hpp">
+      <Filter>mLib</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
