@@ -11,11 +11,12 @@ pair<vector<int>, vector<int>> dijkstraInterface(vector<vector<unsigned int>> gr
 	vector<int> prev(graph.size(), -1);
 	distance[start] = 0;
 
+	//实际上队列头部是包含{最短路径，对应节点}的pair，使用默认greater 对pair的排序方式
 	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> q;  //放当前距离，节点序号 pair
 	q.push({ 0, start });
 	while (!q.empty())
 	{
-		pair<int, int> tmp = q.top();
+		pair<int, int> tmp = q.top();   //取出当前队列中待使用的最短路径的节点
 		q.pop();
 		int pren = tmp.second;
 		if (distance[pren] < tmp.first) //pren已经更短，无需松弛pren指出来的边

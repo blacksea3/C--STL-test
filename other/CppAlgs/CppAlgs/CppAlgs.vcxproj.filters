@@ -124,6 +124,9 @@
     <ClCompile Include="..\Graph\dijkstra.cpp">
       <Filter>Graph</Filter>
     </ClCompile>
+    <ClCompile Include="..\Graph\BellmanFord.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci\fibonacci.hpp">
@@ -208,6 +211,9 @@
       <Filter>Graph</Filter>
     </ClInclude>
     <ClInclude Include="..\Graph\dijkstra.hpp">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graph\BellmanFord.hpp">
       <Filter>Graph</Filter>
     </ClInclude>
   </ItemGroup>

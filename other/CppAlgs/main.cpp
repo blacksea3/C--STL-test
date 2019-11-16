@@ -23,7 +23,8 @@
 //#include "Graph/topologicalSort.hpp"
 //#include "Graph/strongConnectedComponents.hpp"
 //#include "Graph/BFS.hpp"
-#include "Graph/dijkstra.hpp"
+//#include "Graph/dijkstra.hpp"
+#include "Graph/BellmanFord.hpp"
 
 int main()
 {
@@ -66,7 +67,8 @@ int main()
 	//topologicalSortTest();
 	//sCCsTest();
 	//BFSTest();
-	dijkstraTest();
+	//dijkstraTest();
+	BFTest();
 
 	return 0;
 }

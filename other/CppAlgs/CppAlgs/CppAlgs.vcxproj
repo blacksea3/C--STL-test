@@ -26,6 +26,7 @@
     <ClCompile Include="..\DynamicProgramming\Knapsack.cpp" />
     <ClCompile Include="..\DynamicProgramming\PlaceParentheses.cpp" />
     <ClCompile Include="..\Fibonacci\fibonacci.cpp" />
+    <ClCompile Include="..\Graph\BellmanFord.cpp" />
     <ClCompile Include="..\Graph\BFS.cpp" />
     <ClCompile Include="..\Graph\dijkstra.cpp" />
     <ClCompile Include="..\Graph\graphMain.cpp" />
@@ -54,6 +55,7 @@
     <ClInclude Include="..\DivideConquer\BinarySearch.hpp" />
     <ClInclude Include="..\DivideConquer\PolyMul.hpp" />
     <ClInclude Include="..\Fibonacci\fibonacci.hpp" />
+    <ClInclude Include="..\Graph\BellmanFord.hpp" />
     <ClInclude Include="..\Graph\BFS.hpp" />
     <ClInclude Include="..\Graph\dijkstra.hpp" />
     <ClInclude Include="..\Graph\graphMain.hpp" />
