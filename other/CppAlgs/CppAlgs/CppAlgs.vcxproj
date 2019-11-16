@@ -30,7 +30,10 @@
     <ClCompile Include="..\Graph\BFS.cpp" />
     <ClCompile Include="..\Graph\dijkstra.cpp" />
     <ClCompile Include="..\Graph\graphMain.cpp" />
+    <ClCompile Include="..\Graph\Kruskal.cpp" />
+    <ClCompile Include="..\Graph\Prim.cpp" />
     <ClCompile Include="..\Graph\strongConnectedComponents.cpp" />
+    <ClCompile Include="..\Graph\tarjan.cpp" />
     <ClCompile Include="..\Graph\topologicalSort.cpp" />
     <ClCompile Include="..\Greedy\MinRefills.cpp" />
     <ClCompile Include="..\main.cpp" />
@@ -59,7 +62,10 @@
     <ClInclude Include="..\Graph\BFS.hpp" />
     <ClInclude Include="..\Graph\dijkstra.hpp" />
     <ClInclude Include="..\Graph\graphMain.hpp" />
+    <ClInclude Include="..\Graph\Kruskal.hpp" />
+    <ClInclude Include="..\Graph\Prim.hpp" />
     <ClInclude Include="..\Graph\strongConnectedComponents.hpp" />
+    <ClInclude Include="..\Graph\tarjan.hpp" />
     <ClInclude Include="..\Graph\topologicalSort.hpp" />
     <ClInclude Include="..\Greedy\MinRefills.hpp" />
     <ClInclude Include="..\mGCD\mGCD.hpp" />

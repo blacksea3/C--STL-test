@@ -127,6 +127,15 @@
     <ClCompile Include="..\Graph\BellmanFord.cpp">
       <Filter>Graph</Filter>
     </ClCompile>
+    <ClCompile Include="..\Graph\Kruskal.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Graph\Prim.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Graph\tarjan.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci\fibonacci.hpp">
@@ -214,6 +223,15 @@
       <Filter>Graph</Filter>
     </ClInclude>
     <ClInclude Include="..\Graph\BellmanFord.hpp">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graph\Kruskal.hpp">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graph\Prim.hpp">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graph\tarjan.hpp">
       <Filter>Graph</Filter>
     </ClInclude>
   </ItemGroup>

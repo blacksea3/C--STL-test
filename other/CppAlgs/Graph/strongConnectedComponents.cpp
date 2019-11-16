@@ -20,7 +20,7 @@ void sCCsDFS(std::vector<int>& postOrder, std::vector<std::vector<bool>> const& 
 }
 
 /*
- * 求强相连分量接口
+ * 反向图+双DFS 求强相连分量接口
  * 输入图
  * 输出分组后的强相连分量
  */
