@@ -22,7 +22,8 @@
 //#include "mLib/mLibSimplifyBinaryTree.hpp"
 //#include "Graph/topologicalSort.hpp"
 //#include "Graph/strongConnectedComponents.hpp"
-#include "Graph/BFS.hpp"
+//#include "Graph/BFS.hpp"
+#include "Graph/dijkstra.hpp"
 
 int main()
 {
@@ -64,7 +65,8 @@ int main()
 	//msp_searchtreeTest();
 	//topologicalSortTest();
 	//sCCsTest();
-	BFSTest();
+	//BFSTest();
+	dijkstraTest();
 
 	return 0;
 }
