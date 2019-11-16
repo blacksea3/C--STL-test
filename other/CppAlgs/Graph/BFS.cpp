@@ -1,8 +1,14 @@
 #include "BFS.hpp"
 
-vector<int> BFSInterface(vector<vector<bool>> graph, int start)
+/*
+ * BFS接口
+ * 输入图和开始节点
+ * 输出pair:first其他节点到开始节点的最短路径以及second所有节点的先导节点序号（开始节点的先导节点序号为-1）
+ */
+pair<vector<int>, vector<int>> BFSInterface(vector<vector<bool>> graph, int start)
 {
 	vector<int> distance(graph.size(), INT_MAX);
+	vector<int> prev(graph.size(), -1);
 	distance[start] = 0;
 
 	queue<int> q;
@@ -18,10 +24,29 @@ vector<int> BFSInterface(vector<vector<bool>> graph, int start)
 				{
 					q.push(i);
 					distance[i] = distance[tmp] + 1;
+					prev[i] = tmp;
 				}
 		}
 	}
-	return distance;
+	return { distance, prev };
+}
+
+/*
+ * 重建最短路径start->i
+ * 输入开始节点、目标节点和先导节点数组
+ * 输出数组：开始节点到目标节点经过的所有节点序号
+ */
+vector<int> ReconstructPath(int st, int tar, vector<int> prev)
+{
+	vector<int> res;
+	while (tar != st)
+	{
+		res.emplace_back(tar);
+		tar = prev[tar];
+	}
+	res.emplace_back(st);
+	reverse(res.begin(), res.end());
+	return res;
 }
 
 void BFSTest()
@@ -30,6 +55,7 @@ void BFSTest()
 	int points = 4;
 	vector<vector<bool>> graph(points, vector<bool>(points, false));
 	for (auto& e : edge) graph[e[0]][e[1]] = true;
-	vector<int> res = BFSInterface(graph, 0);
+	pair<vector<int>, vector<int>> res = BFSInterface(graph, 0);
+	vector<int> path = ReconstructPath(0, 3, res.second);
 	int i = 1;
 }
