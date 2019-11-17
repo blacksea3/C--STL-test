@@ -1,14 +1,14 @@
-#include "tarjan.hpp"
+#include "tarjanSCC.hpp"
 
 /*
- * tarjan内部DFS
+ * tarjanSCC内部DFS
  * 输入 std::vector<std::vector<bool>> const& graph 图
  * std::vector<bool>& isInstack 是否在栈中, std::stack<int>& st DFS访问栈
  * std::vector<int>& DFN, DFS访问顺序 std::vector<int>& LOW自己以及以其为根的子树中最小的DFS访问顺序值
  * int seq 当前访问顺序, 
  *  int pren 当前节点, std::vector<std::vector<int>>& res强连通分量分组结果
  */
-void tarjanDFS(std::vector<std::vector<bool>> const& graph,
+void tarjanSCCDFS(std::vector<std::vector<bool>> const& graph,
 	std::vector<bool>& isInstack, std::stack<int>& st,
 	std::vector<int>& DFN, std::vector<int>& LOW, int& seq,
 	int pren, std::vector<std::vector<int>>& res)
@@ -22,7 +22,7 @@ void tarjanDFS(std::vector<std::vector<bool>> const& graph,
 		{
 			if (DFN[i] == INT_MAX)  //从未访问过
 			{
-				tarjanDFS(graph, isInstack, st, DFN, LOW, seq, i, res);
+				tarjanSCCDFS(graph, isInstack, st, DFN, LOW, seq, i, res);
 				LOW[pren] = min(LOW[pren], LOW[i]);
 			}
 			else if(isInstack[i])   //当前访问过
@@ -65,7 +65,7 @@ std::vector<std::vector<int>> tarjanSCCInterface(std::vector<std::vector<bool>> 
 	for (int i = 0; i < gSize; ++i)
 	{
 		if (DFN[i] == INT_MAX)
-			tarjanDFS(graph, isInstack, st, DFN, LOW, seq, i, res);
+			tarjanSCCDFS(graph, isInstack, st, DFN, LOW, seq, i, res);
 	}
 	return res;
 }

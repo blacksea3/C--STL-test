@@ -21,13 +21,15 @@
 //#include "Graph/graphMain.hpp"
 //#include "mLib/mLibSimplifyBinaryTree.hpp"
 //#include "Graph/topologicalSort.hpp"
-#include "Graph/strongConnectedComponents.hpp"
+//#include "Graph/strongConnectedComponents.hpp"
 //#include "Graph/BFS.hpp"
 //#include "Graph/dijkstra.hpp"
 //#include "Graph/BellmanFord.hpp"
 //#include "Graph/Kruskal.hpp"
 //#include "Graph//Prim.hpp"
-#include "Graph/tarjan.hpp"
+//#include "Graph/tarjanSCC.hpp"
+#include "Graph/tarjanUGNode.hpp"
+#include "Graph/tarjanUGedge.hpp"
 
 int main()
 {
@@ -68,13 +70,15 @@ int main()
 	//graphMainInterface();
 	//msp_searchtreeTest();
 	//topologicalSortTest();
-	sCCsTest();
+	//sCCsTest();
 	//BFSTest();
 	//dijkstraTest();
 	//BFTest();
 	//kruskalTest();
 	//primTest();
-	tarjansCCTest();
+	//tarjansCCTest();
+	//tarjanUGNodeTest();
+	tarjanUGedgeTest();
 
 	return 0;
 }

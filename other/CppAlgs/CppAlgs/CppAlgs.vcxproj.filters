@@ -133,7 +133,13 @@
     <ClCompile Include="..\Graph\Prim.cpp">
       <Filter>Graph</Filter>
     </ClCompile>
-    <ClCompile Include="..\Graph\tarjan.cpp">
+    <ClCompile Include="..\Graph\tarjanSCC.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Graph\tarjanUGNode.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Graph\tarjanUGedge.cpp">
       <Filter>Graph</Filter>
     </ClCompile>
   </ItemGroup>
@@ -231,7 +237,13 @@
     <ClInclude Include="..\Graph\Prim.hpp">
       <Filter>Graph</Filter>
     </ClInclude>
-    <ClInclude Include="..\Graph\tarjan.hpp">
+    <ClInclude Include="..\Graph\tarjanSCC.hpp">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graph\tarjanUGNode.hpp">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graph\tarjanUGedge.hpp">
       <Filter>Graph</Filter>
     </ClInclude>
   </ItemGroup>

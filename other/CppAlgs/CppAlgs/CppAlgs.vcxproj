@@ -33,7 +33,9 @@
     <ClCompile Include="..\Graph\Kruskal.cpp" />
     <ClCompile Include="..\Graph\Prim.cpp" />
     <ClCompile Include="..\Graph\strongConnectedComponents.cpp" />
-    <ClCompile Include="..\Graph\tarjan.cpp" />
+    <ClCompile Include="..\Graph\tarjanSCC.cpp" />
+    <ClCompile Include="..\Graph\tarjanUGedge.cpp" />
+    <ClCompile Include="..\Graph\tarjanUGNode.cpp" />
     <ClCompile Include="..\Graph\topologicalSort.cpp" />
     <ClCompile Include="..\Greedy\MinRefills.cpp" />
     <ClCompile Include="..\main.cpp" />
@@ -65,7 +67,9 @@
     <ClInclude Include="..\Graph\Kruskal.hpp" />
     <ClInclude Include="..\Graph\Prim.hpp" />
     <ClInclude Include="..\Graph\strongConnectedComponents.hpp" />
-    <ClInclude Include="..\Graph\tarjan.hpp" />
+    <ClInclude Include="..\Graph\tarjanSCC.hpp" />
+    <ClInclude Include="..\Graph\tarjanUGedge.hpp" />
+    <ClInclude Include="..\Graph\tarjanUGNode.hpp" />
     <ClInclude Include="..\Graph\topologicalSort.hpp" />
     <ClInclude Include="..\Greedy\MinRefills.hpp" />
     <ClInclude Include="..\mGCD\mGCD.hpp" />
