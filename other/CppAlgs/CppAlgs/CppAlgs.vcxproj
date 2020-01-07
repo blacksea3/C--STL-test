@@ -38,6 +38,15 @@
     <ClCompile Include="..\Graph\tarjanUGNode.cpp" />
     <ClCompile Include="..\Graph\topologicalSort.cpp" />
     <ClCompile Include="..\Greedy\MinRefills.cpp" />
+    <ClCompile Include="..\json\imp\json_reader.cpp" />
+    <ClCompile Include="..\json\imp\json_value.cpp" />
+    <ClCompile Include="..\json\imp\json_writer.cpp" />
+    <ClCompile Include="..\json\judgeFrame.cpp" />
+    <ClCompile Include="..\json\mParseJson.cpp" />
+    <ClCompile Include="..\json\test\fuzz.cpp" />
+    <ClCompile Include="..\json\test\jsontest.cpp" />
+    <ClCompile Include="..\json\test\m_unittest.cpp" />
+    <ClCompile Include="..\json\test\official_unittest_interface.cpp" />
     <ClCompile Include="..\main.cpp" />
     <ClCompile Include="..\mGCD\mGCD.cpp" />
     <ClCompile Include="..\mLib\mLibBinaryTree.cpp" />
@@ -72,6 +81,23 @@
     <ClInclude Include="..\Graph\tarjanUGNode.hpp" />
     <ClInclude Include="..\Graph\topologicalSort.hpp" />
     <ClInclude Include="..\Greedy\MinRefills.hpp" />
+    <ClInclude Include="..\json\imp\json_tool.h" />
+    <ClInclude Include="..\json\include\allocator.h" />
+    <ClInclude Include="..\json\include\assertions.h" />
+    <ClInclude Include="..\json\include\config.h" />
+    <ClInclude Include="..\json\include\forwards.h" />
+    <ClInclude Include="..\json\include\json.h" />
+    <ClInclude Include="..\json\include\json_features.h" />
+    <ClInclude Include="..\json\include\reader.h" />
+    <ClInclude Include="..\json\include\value.h" />
+    <ClInclude Include="..\json\include\version.h" />
+    <ClInclude Include="..\json\include\writer.h" />
+    <ClInclude Include="..\json\judgeFrame.hpp" />
+    <ClInclude Include="..\json\mParseJson.hpp" />
+    <ClInclude Include="..\json\test\fuzz.h" />
+    <ClInclude Include="..\json\test\jsontest.h" />
+    <ClInclude Include="..\json\test\m_unittest.hpp" />
+    <ClInclude Include="..\json\test\official_unittest_interface.hpp" />
     <ClInclude Include="..\mGCD\mGCD.hpp" />
     <ClInclude Include="..\mLib\mLibalgorithm.hpp" />
     <ClInclude Include="..\mLib\mLibBinaryTree.hpp" />
@@ -91,6 +117,9 @@
     <ClInclude Include="..\String\Trie.hpp" />
     <ClInclude Include="..\TestData\TestStringData.hpp" />
     <ClInclude Include="..\TestData\TestTreeData.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\json\imp\json_valueiterator.inl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

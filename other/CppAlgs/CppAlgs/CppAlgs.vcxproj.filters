@@ -34,6 +34,18 @@
     <Filter Include="Graph">
       <UniqueIdentifier>{76c482e0-9860-49eb-b70e-bed86ce586bb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="json">
+      <UniqueIdentifier>{2fc25ab7-1e0e-477a-b49c-d7abdc34687a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json\imp">
+      <UniqueIdentifier>{0407f1fe-83cd-49be-853e-125cd724954f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json\test">
+      <UniqueIdentifier>{3b4ba955-32dc-4493-ab79-70ee34703f3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json\include">
+      <UniqueIdentifier>{c4667f81-4777-41fc-bb16-13c93268e453}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Fibonacci\fibonacci.cpp">
@@ -142,6 +154,33 @@
     <ClCompile Include="..\Graph\tarjanUGedge.cpp">
       <Filter>Graph</Filter>
     </ClCompile>
+    <ClCompile Include="..\json\imp\json_reader.cpp">
+      <Filter>json\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\json\imp\json_value.cpp">
+      <Filter>json\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\json\imp\json_writer.cpp">
+      <Filter>json\imp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\json\test\fuzz.cpp">
+      <Filter>json\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\json\test\jsontest.cpp">
+      <Filter>json\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\json\test\official_unittest_interface.cpp">
+      <Filter>json\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\json\test\m_unittest.cpp">
+      <Filter>json\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\json\judgeFrame.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\json\mParseJson.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci\fibonacci.hpp">
@@ -246,5 +285,61 @@
     <ClInclude Include="..\Graph\tarjanUGedge.hpp">
       <Filter>Graph</Filter>
     </ClInclude>
+    <ClInclude Include="..\json\imp\json_tool.h">
+      <Filter>json\imp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\include\allocator.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\include\assertions.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\include\config.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\include\forwards.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\include\json.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\include\json_features.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\include\reader.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\include\value.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\include\version.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\include\writer.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\test\fuzz.h">
+      <Filter>json\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\test\jsontest.h">
+      <Filter>json\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\test\official_unittest_interface.hpp">
+      <Filter>json\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\test\m_unittest.hpp">
+      <Filter>json\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\judgeFrame.hpp">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\mParseJson.hpp">
+      <Filter>json</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\json\imp\json_valueiterator.inl">
+      <Filter>json\imp</Filter>
+    </None>
   </ItemGroup>
 </Project>

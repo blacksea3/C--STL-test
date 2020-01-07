@@ -28,10 +28,14 @@
 //#include "Graph/Kruskal.hpp"
 //#include "Graph//Prim.hpp"
 //#include "Graph/tarjanSCC.hpp"
-#include "Graph/tarjanUGNode.hpp"
-#include "Graph/tarjanUGedge.hpp"
+//#include "Graph/tarjanUGNode.hpp"
+//#include "Graph/tarjanUGedge.hpp"
 
-int main()
+//#include "json/test/official_unittest_interface.hpp"
+//#include "json/test/m_unittest.hpp"
+#include "json/judgeFrame.hpp"
+
+int main(int argc, const char* argv[])
 {
 	//fibonacci_main();
 	//minRefillsInterface();
@@ -78,7 +82,12 @@ int main()
 	//primTest();
 	//tarjansCCTest();
 	//tarjanUGNodeTest();
-	tarjanUGedgeTest();
+	//tarjanUGedgeTest();
+
+	//jsonUnitestTest();
+	//m_json_unittest_interface();
+
+	judgeFrame_unittest();
 
 	return 0;
 }
