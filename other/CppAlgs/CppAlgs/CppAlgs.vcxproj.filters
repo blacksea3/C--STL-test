@@ -175,10 +175,10 @@
     <ClCompile Include="..\json\test\m_unittest.cpp">
       <Filter>json\test</Filter>
     </ClCompile>
-    <ClCompile Include="..\json\judgeFrame.cpp">
+    <ClCompile Include="..\json\mParseJson.cpp">
       <Filter>json</Filter>
     </ClCompile>
-    <ClCompile Include="..\json\mParseJson.cpp">
+    <ClCompile Include="..\json\judgeFrame.cpp">
       <Filter>json</Filter>
     </ClCompile>
   </ItemGroup>
@@ -330,10 +330,10 @@
     <ClInclude Include="..\json\test\m_unittest.hpp">
       <Filter>json\test</Filter>
     </ClInclude>
-    <ClInclude Include="..\json\judgeFrame.hpp">
+    <ClInclude Include="..\json\mParseJson.hpp">
       <Filter>json</Filter>
     </ClInclude>
-    <ClInclude Include="..\json\mParseJson.hpp">
+    <ClInclude Include="..\json\judgeFrame.hpp">
       <Filter>json</Filter>
     </ClInclude>
   </ItemGroup>
