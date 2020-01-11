@@ -63,7 +63,7 @@ namespace m_JSONFrame {
 		}
 
 		{
-			string raw = "[[false, true],[]]\n[[1, 63],[3,-129]]\n\n[5.66,[6.90,-0.01]]\n[[\"d\", \"8%8\"],[\"O**K\"]]\n";
+			string raw = "[[false, true],[],[true]]\n[[1, 63],[3,-129]]\n\n[[5.66],[6.90,-0.01]]\n[[\"d\", \"88\"],[\"O**K\"]]\n";
 			vector<string> vString = mJSONsplit(raw);
 
 			vector<vector<bool>> p1;
@@ -81,10 +81,28 @@ namespace m_JSONFrame {
 			}
 		}
 
-		/*
+		{
+			vector<vector<int>> v = { {1,32,3},{},{4} };
+			mGenJson m = mGenJson(v);
+			cout << m.getJSONString() << endl;
+		}
 
-		mGenJson m = mGenJson(false);
-		*/
+		{
+			vector<string> v = { "dsaddsa", "d*", "" };
+			mGenJson m = mGenJson(v);
+			cout << m.getJSONString() << endl;
+		}
 
+		{
+			vector<bool> v = { false, true };
+			mGenJson m = mGenJson(v);
+			cout << m.getJSONString() << endl;
+		}
+
+		{
+			vector<double> v = { };
+			mGenJson m = mGenJson(v);
+			cout << m.getJSONString() << endl;
+		}
 	}
 }
