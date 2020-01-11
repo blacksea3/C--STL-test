@@ -87,7 +87,7 @@ int main(int argc, const char* argv[])
 	//jsonUnitestTest();
 	//m_json_unittest_interface();
 
-	judgeFrame_unittest();
+	m_JSONFrame::judgeFrame_unittest();
 
 	return 0;
 }

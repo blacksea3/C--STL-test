@@ -42,6 +42,7 @@
     <ClCompile Include="..\json\imp\json_value.cpp" />
     <ClCompile Include="..\json\imp\json_writer.cpp" />
     <ClCompile Include="..\json\judgeFrame.cpp" />
+    <ClCompile Include="..\json\mGenJson.cpp" />
     <ClCompile Include="..\json\mParseJson.cpp" />
     <ClCompile Include="..\json\test\fuzz.cpp" />
     <ClCompile Include="..\json\test\jsontest.cpp" />
@@ -93,7 +94,9 @@
     <ClInclude Include="..\json\include\version.h" />
     <ClInclude Include="..\json\include\writer.h" />
     <ClInclude Include="..\json\judgeFrame.hpp" />
+    <ClInclude Include="..\json\mGenJson.hpp" />
     <ClInclude Include="..\json\mParseJson.hpp" />
+    <ClInclude Include="..\json\template_fillInputArgs.hpp" />
     <ClInclude Include="..\json\test\fuzz.h" />
     <ClInclude Include="..\json\test\jsontest.h" />
     <ClInclude Include="..\json\test\m_unittest.hpp" />

@@ -181,6 +181,9 @@
     <ClCompile Include="..\json\judgeFrame.cpp">
       <Filter>json</Filter>
     </ClCompile>
+    <ClCompile Include="..\json\mGenJson.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fibonacci\fibonacci.hpp">
@@ -334,6 +337,12 @@
       <Filter>json</Filter>
     </ClInclude>
     <ClInclude Include="..\json\judgeFrame.hpp">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\mGenJson.hpp">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\template_fillInputArgs.hpp">
       <Filter>json</Filter>
     </ClInclude>
   </ItemGroup>
