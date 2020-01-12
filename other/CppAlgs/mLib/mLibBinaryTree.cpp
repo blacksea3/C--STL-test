@@ -1,5 +1,7 @@
 #include "mLibBinaryTree.hpp"
 
+#include <map>
+
 namespace mLib
 {
 	void mLibBinaryTreeClassTest()

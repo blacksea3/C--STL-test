@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\bla\allocator\defaloc.cpp" />
+    <ClCompile Include="..\bla\public\exception.cpp" />
     <ClCompile Include="..\DivideConquer\BinarySearch.cpp" />
     <ClCompile Include="..\DivideConquer\PolyMul.cpp" />
     <ClCompile Include="..\DynamicProgramming\DPchange.cpp" />
@@ -55,6 +57,7 @@
     <ClCompile Include="..\mLib\mLiblist.cpp" />
     <ClCompile Include="..\mLib\mLibpriorityQueue.cpp" />
     <ClCompile Include="..\mLib\mLibSimplifyBinaryTree.cpp" />
+    <ClCompile Include="..\mLib\mLibTest.cpp" />
     <ClCompile Include="..\mLib\mLibunordered_map.cpp" />
     <ClCompile Include="..\mLib\mLibvector.cpp" />
     <ClCompile Include="..\Sort\Sort.cpp" />
@@ -67,6 +70,9 @@
     <ClCompile Include="..\TestData\TestTreeData.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\bla\allocator\defaloc.hpp" />
+    <ClInclude Include="..\bla\public\constants.hpp" />
+    <ClInclude Include="..\bla\public\exception.hpp" />
     <ClInclude Include="..\DivideConquer\BinarySearch.hpp" />
     <ClInclude Include="..\DivideConquer\PolyMul.hpp" />
     <ClInclude Include="..\Fibonacci\fibonacci.hpp" />
@@ -108,6 +114,7 @@
     <ClInclude Include="..\mLib\mLiblist.hpp" />
     <ClInclude Include="..\mLib\mLibpriorityQueue.hpp" />
     <ClInclude Include="..\mLib\mLibSimplifyBinaryTree.hpp" />
+    <ClInclude Include="..\mLib\mLibTest.hpp" />
     <ClInclude Include="..\mLib\mLibunordered_map.hpp" />
     <ClInclude Include="..\mLib\mLibvector.hpp" />
     <ClInclude Include="..\public\estimateFuncTime.hpp" />

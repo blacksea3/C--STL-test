@@ -6,6 +6,17 @@
 namespace m_JSONFrame {
 	void judgeFrame_unittest() {
 		{
+			string raw = "abcd";
+			vector<string> vString = mJSONsplit(raw);
+			string p1;
+			pair<bool, string> ret = fillInputArgs(vString, 0, &p1);
+			if (!ret.first) cout << ret.second << endl;
+			else {
+				debugPrint<string>(p1);
+			}
+		}
+
+		{
 			string raw = "false\n\n20\n7.89\n\"sstr+-*/ _ing\"\n\n";
 			vector<string> vString = mJSONsplit(raw);
 

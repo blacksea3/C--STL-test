@@ -46,6 +46,15 @@
     <Filter Include="json\include">
       <UniqueIdentifier>{c4667f81-4777-41fc-bb16-13c93268e453}</UniqueIdentifier>
     </Filter>
+    <Filter Include="bla">
+      <UniqueIdentifier>{fa0413da-128f-4de9-88c3-585f87a2b653}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bla\allocator">
+      <UniqueIdentifier>{f911ad15-98bc-413c-a059-01bf2147fd51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bla\public">
+      <UniqueIdentifier>{b3ecf1ed-43b1-47a4-b25a-03837f6ff2a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Fibonacci\fibonacci.cpp">
@@ -183,6 +192,15 @@
     </ClCompile>
     <ClCompile Include="..\json\mGenJson.cpp">
       <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mLib\mLibTest.cpp">
+      <Filter>mLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bla\allocator\defaloc.cpp">
+      <Filter>bla\allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bla\public\exception.cpp">
+      <Filter>bla\public</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -344,6 +362,18 @@
     </ClInclude>
     <ClInclude Include="..\json\template_fillInputArgs.hpp">
       <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mLib\mLibTest.hpp">
+      <Filter>mLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bla\allocator\defaloc.hpp">
+      <Filter>bla\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bla\public\constants.hpp">
+      <Filter>bla\public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bla\public\exception.hpp">
+      <Filter>bla\public</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

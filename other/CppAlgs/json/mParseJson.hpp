@@ -210,6 +210,7 @@ namespace m_JSONFrame {
 			res = jsonReader->parse(s.c_str(), s.c_str() + s.size(), &root, &errs);
 			if (!res || !errs.empty()) {
 				errorString = "jsonReader->parse of mParseJson<double>: parseError, input is:" + s + "errs is" + errs;
+				dataInvalid = true;
 			}
 			else {
 				if (root.isDouble()) {
@@ -271,6 +272,7 @@ namespace m_JSONFrame {
 			res = jsonReader->parse(s.c_str(), s.c_str() + s.size(), &root, &errs);
 			if (!res || !errs.empty()) {
 				errorString = "jsonReader->parse of mParseJson<string>: parseError, input is:" + s + "errs is" + errs;
+				dataInvalid = true;
 			}
 			else {
 				if (root.isString()) {
@@ -421,6 +423,7 @@ namespace m_JSONFrame {
 			res = jsonReader->parse(s.c_str(), s.c_str() + s.size(), &root, &errs);
 			if (!res || !errs.empty()) {
 				errorString = "jsonReader->parse of mParseJson<vector<int>>: parseError, input is:" + s + "errs is" + errs;
+				dataInvalid = true;
 			}
 			else {
 				if (root.isArray()) {
@@ -499,6 +502,7 @@ namespace m_JSONFrame {
 			res = jsonReader->parse(s.c_str(), s.c_str() + s.size(), &root, &errs);
 			if (!res || !errs.empty()) {
 				errorString = "jsonReader->parse of mParseJson<vector<double>>: parseError, input is:" + s + "errs is" + errs;
+				dataInvalid = true;
 			}
 			else {
 				if (root.isArray()) {
@@ -577,6 +581,7 @@ namespace m_JSONFrame {
 			res = jsonReader->parse(s.c_str(), s.c_str() + s.size(), &root, &errs);
 			if (!res || !errs.empty()) {
 				errorString = "jsonReader->parse of mParseJson<vector<string>>: parseError, input is:" + s + "errs is" + errs;
+				dataInvalid = true;
 			}
 			else {
 				if (root.isArray()) {
