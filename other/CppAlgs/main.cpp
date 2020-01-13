@@ -58,6 +58,7 @@ inline void EnableMemLeakCheck()
 }
 
 #include "bla/allocator/defaloc.hpp"
+#include "bla/container/array.hpp"
 
 int main(int argc, const char* argv[])
 {
@@ -118,12 +119,13 @@ int main(int argc, const char* argv[])
 
 	//mLib::mLibTest_unittest();
 
-	//_CrtSetBreakAlloc(193);
-	bla::defaloc_unittest();
+	//_CrtSetBreakAlloc(191);
+	//bla::defaloc_unittest();
+	
 
 	//_CrtDumpMemoryLeaks(); //这个代码好像会输出额外多余的内存分配信息;
 
-
+	bla::array_unittest();
 
 	return 0;
 }

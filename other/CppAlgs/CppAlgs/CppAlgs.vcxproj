@@ -20,7 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\bla\allocator\defaloc.cpp" />
+    <ClCompile Include="..\bla\container\array.cpp" />
     <ClCompile Include="..\bla\public\exception.cpp" />
+    <ClCompile Include="..\bla\test\test1.cpp" />
+    <ClCompile Include="..\bla\test\test2.cpp" />
     <ClCompile Include="..\DivideConquer\BinarySearch.cpp" />
     <ClCompile Include="..\DivideConquer\PolyMul.cpp" />
     <ClCompile Include="..\DynamicProgramming\DPchange.cpp" />
@@ -71,8 +74,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\bla\allocator\defaloc.hpp" />
+    <ClInclude Include="..\bla\container\array.hpp" />
+    <ClInclude Include="..\bla\iterator\iterator_traits.hpp" />
     <ClInclude Include="..\bla\public\constants.hpp" />
     <ClInclude Include="..\bla\public\exception.hpp" />
+    <ClInclude Include="..\bla\test\noTrivalClass.hpp" />
+    <ClInclude Include="..\bla\test\test1.hpp" />
+    <ClInclude Include="..\bla\test\test2.hpp" />
     <ClInclude Include="..\DivideConquer\BinarySearch.hpp" />
     <ClInclude Include="..\DivideConquer\PolyMul.hpp" />
     <ClInclude Include="..\Fibonacci\fibonacci.hpp" />

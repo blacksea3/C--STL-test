@@ -4,53 +4,51 @@
 #include "../public/exception.hpp"
 
 namespace bla {
-	class __defalocTestClass {
+	template<typename _GeneraicType>
+	class _defaloc {
 	private:
-		char* c;
+		typedef _GeneraicType* _pointerGeneraicType;
 	public:
-		__defalocTestClass() {
-			c = (char*)malloc(sizeof(char));
-		}
-		~__defalocTestClass() {
-			free(c);
-		}
-	};
-
-
-	template<typename __GeneraicType>
-	class __defaloc {
-	private:
-		typedef __GeneraicType* __pointerGeneraicType;
-	public:
-		static __pointerGeneraicType _allocate(__allocatorSizeType len) {
-			__pointerGeneraicType _pGT = (__pointerGeneraicType)malloc(sizeof(__GeneraicType)*len);
+		static _pointerGeneraicType _allocate(_allocatorSizeType len) {
+			_pointerGeneraicType _pGT = (_pointerGeneraicType)malloc(sizeof(_GeneraicType)*len);
 			if (_pGT == nullptr) {
-				throw baseException("class:__defaloc func:_allocate error");
+				throw baseException("class:_defaloc func:_allocate error");
 			}
 			else {
 				return _pGT;
 			}
 		}
 
-		static void _deallocate(__pointerGeneraicType ptr) {
-			if (ptr == nullptr) throw baseException("class:__defaloc func:_deallocate error");
+		static void _deallocate(_pointerGeneraicType ptr) {
+			if (ptr == nullptr) throw baseException("class:_defaloc func:_deallocate error");
 			else free(ptr);
 		}
 
-		static __pointerGeneraicType _construct(__pointerGeneraicType ptr)
+		static _pointerGeneraicType _construct(_pointerGeneraicType ptr)
 		{
 			try {
-				__pointerGeneraicType _pGT = new(ptr) __GeneraicType();
+				_pointerGeneraicType _pGT = new(ptr) _GeneraicType();
 				return _pGT;
 			}
 			catch (std::bad_alloc) {
-				throw baseException("class:__defaloc func:_construct error");
+				throw baseException("class:_defaloc func:_construct error");
 			}
 		}
 
-		static void _destroy(__pointerGeneraicType ptr)
+		static _pointerGeneraicType _construct(_pointerGeneraicType ptr, _GeneraicType g)
 		{
-			ptr->~__GeneraicType();
+			try {
+				_pointerGeneraicType _pGT = new(ptr) _GeneraicType(g);
+				return _pGT;
+			}
+			catch (std::bad_alloc) {
+				throw baseException("class:_defaloc func:_construct error");
+			}
+		}
+
+		static void _destroy(_pointerGeneraicType ptr)
+		{
+			ptr->~_GeneraicType();
 		}
 
 	};

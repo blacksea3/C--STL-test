@@ -55,6 +55,18 @@
     <Filter Include="bla\public">
       <UniqueIdentifier>{b3ecf1ed-43b1-47a4-b25a-03837f6ff2a8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="bla\algorithm">
+      <UniqueIdentifier>{e5b16e69-cef7-4c42-a6e7-beb1f6084726}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bla\container">
+      <UniqueIdentifier>{1e89b479-e691-49da-9149-a29bb901adc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bla\iterator">
+      <UniqueIdentifier>{cc301415-c690-4643-8328-25c4e86a29cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bla\test">
+      <UniqueIdentifier>{b710e4cd-0eb4-48fc-9580-a2bd49e56eb6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Fibonacci\fibonacci.cpp">
@@ -201,6 +213,15 @@
     </ClCompile>
     <ClCompile Include="..\bla\public\exception.cpp">
       <Filter>bla\public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bla\test\test1.cpp">
+      <Filter>bla\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bla\test\test2.cpp">
+      <Filter>bla\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bla\container\array.cpp">
+      <Filter>bla\container</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -374,6 +395,21 @@
     </ClInclude>
     <ClInclude Include="..\bla\public\exception.hpp">
       <Filter>bla\public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bla\iterator\iterator_traits.hpp">
+      <Filter>bla\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bla\test\test1.hpp">
+      <Filter>bla\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bla\test\test2.hpp">
+      <Filter>bla\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bla\container\array.hpp">
+      <Filter>bla\container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bla\test\noTrivalClass.hpp">
+      <Filter>bla\test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
