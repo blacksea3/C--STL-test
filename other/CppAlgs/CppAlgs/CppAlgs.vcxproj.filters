@@ -46,26 +46,8 @@
     <Filter Include="json\include">
       <UniqueIdentifier>{c4667f81-4777-41fc-bb16-13c93268e453}</UniqueIdentifier>
     </Filter>
-    <Filter Include="bla">
-      <UniqueIdentifier>{fa0413da-128f-4de9-88c3-585f87a2b653}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="bla\allocator">
-      <UniqueIdentifier>{f911ad15-98bc-413c-a059-01bf2147fd51}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="bla\public">
-      <UniqueIdentifier>{b3ecf1ed-43b1-47a4-b25a-03837f6ff2a8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="bla\algorithm">
-      <UniqueIdentifier>{e5b16e69-cef7-4c42-a6e7-beb1f6084726}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="bla\container">
-      <UniqueIdentifier>{1e89b479-e691-49da-9149-a29bb901adc9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="bla\iterator">
-      <UniqueIdentifier>{cc301415-c690-4643-8328-25c4e86a29cd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="bla\test">
-      <UniqueIdentifier>{b710e4cd-0eb4-48fc-9580-a2bd49e56eb6}</UniqueIdentifier>
+    <Filter Include="mptr">
+      <UniqueIdentifier>{904b60db-f1a4-4848-900c-47d44f7ada5f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -208,20 +190,8 @@
     <ClCompile Include="..\mLib\mLibTest.cpp">
       <Filter>mLib</Filter>
     </ClCompile>
-    <ClCompile Include="..\bla\allocator\defaloc.cpp">
-      <Filter>bla\allocator</Filter>
-    </ClCompile>
-    <ClCompile Include="..\bla\public\exception.cpp">
-      <Filter>bla\public</Filter>
-    </ClCompile>
-    <ClCompile Include="..\bla\test\test1.cpp">
-      <Filter>bla\test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\bla\test\test2.cpp">
-      <Filter>bla\test</Filter>
-    </ClCompile>
-    <ClCompile Include="..\bla\container\array.cpp">
-      <Filter>bla\container</Filter>
+    <ClCompile Include="..\mptr\mAutoPtr.cpp">
+      <Filter>mptr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -387,29 +357,8 @@
     <ClInclude Include="..\mLib\mLibTest.hpp">
       <Filter>mLib</Filter>
     </ClInclude>
-    <ClInclude Include="..\bla\allocator\defaloc.hpp">
-      <Filter>bla\allocator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\bla\public\constants.hpp">
-      <Filter>bla\public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\bla\public\exception.hpp">
-      <Filter>bla\public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\bla\iterator\iterator_traits.hpp">
-      <Filter>bla\iterator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\bla\test\test1.hpp">
-      <Filter>bla\test</Filter>
-    </ClInclude>
-    <ClInclude Include="..\bla\test\test2.hpp">
-      <Filter>bla\test</Filter>
-    </ClInclude>
-    <ClInclude Include="..\bla\container\array.hpp">
-      <Filter>bla\container</Filter>
-    </ClInclude>
-    <ClInclude Include="..\bla\test\noTrivalClass.hpp">
-      <Filter>bla\test</Filter>
+    <ClInclude Include="..\mptr\mAutoPtr.hpp">
+      <Filter>mptr</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

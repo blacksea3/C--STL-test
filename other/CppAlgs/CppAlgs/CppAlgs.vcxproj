@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -19,11 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\bla\allocator\defaloc.cpp" />
-    <ClCompile Include="..\bla\container\array.cpp" />
-    <ClCompile Include="..\bla\public\exception.cpp" />
-    <ClCompile Include="..\bla\test\test1.cpp" />
-    <ClCompile Include="..\bla\test\test2.cpp" />
     <ClCompile Include="..\DivideConquer\BinarySearch.cpp" />
     <ClCompile Include="..\DivideConquer\PolyMul.cpp" />
     <ClCompile Include="..\DynamicProgramming\DPchange.cpp" />
@@ -63,6 +58,7 @@
     <ClCompile Include="..\mLib\mLibTest.cpp" />
     <ClCompile Include="..\mLib\mLibunordered_map.cpp" />
     <ClCompile Include="..\mLib\mLibvector.cpp" />
+    <ClCompile Include="..\mptr\mAutoPtr.cpp" />
     <ClCompile Include="..\Sort\Sort.cpp" />
     <ClCompile Include="..\String\BWT.cpp" />
     <ClCompile Include="..\String\KMP.cpp" />
@@ -73,14 +69,6 @@
     <ClCompile Include="..\TestData\TestTreeData.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\bla\allocator\defaloc.hpp" />
-    <ClInclude Include="..\bla\container\array.hpp" />
-    <ClInclude Include="..\bla\iterator\iterator_traits.hpp" />
-    <ClInclude Include="..\bla\public\constants.hpp" />
-    <ClInclude Include="..\bla\public\exception.hpp" />
-    <ClInclude Include="..\bla\test\noTrivalClass.hpp" />
-    <ClInclude Include="..\bla\test\test1.hpp" />
-    <ClInclude Include="..\bla\test\test2.hpp" />
     <ClInclude Include="..\DivideConquer\BinarySearch.hpp" />
     <ClInclude Include="..\DivideConquer\PolyMul.hpp" />
     <ClInclude Include="..\Fibonacci\fibonacci.hpp" />
@@ -125,6 +113,7 @@
     <ClInclude Include="..\mLib\mLibTest.hpp" />
     <ClInclude Include="..\mLib\mLibunordered_map.hpp" />
     <ClInclude Include="..\mLib\mLibvector.hpp" />
+    <ClInclude Include="..\mptr\mAutoPtr.hpp" />
     <ClInclude Include="..\public\estimateFuncTime.hpp" />
     <ClInclude Include="..\public\public.hpp" />
     <ClInclude Include="..\Sort\Sort.hpp" />
@@ -144,32 +133,32 @@
     <ProjectGuid>{2166074E-8C29-447C-AABC-747D6D137B9B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>CppAlgs</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -221,13 +210,14 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

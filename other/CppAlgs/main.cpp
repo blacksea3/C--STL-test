@@ -37,6 +37,8 @@
 
 //#include "mLib/mLibTest.hpp"
 
+#include "mptr/mAutoPtr.hpp"
+
 //可以定位到发生内存泄露 所在的文件和具体那一行，用于检测 malloc 分配的内存
 #define _CRTDBG_MAP_ALLOC 
 #include <stdlib.h>
@@ -56,9 +58,6 @@ inline void EnableMemLeakCheck()
 	//如果只有一个退出位置，可以在程序退出之前调用 _CrtDumpMemoryLeaks()
 	_CrtSetDbgFlag(_CrtSetDbgFlag(_CRTDBG_REPORT_FLAG) | _CRTDBG_LEAK_CHECK_DF);
 }
-
-#include "bla/allocator/defaloc.hpp"
-#include "bla/container/array.hpp"
 
 int main(int argc, const char* argv[])
 {
@@ -120,12 +119,10 @@ int main(int argc, const char* argv[])
 	//mLib::mLibTest_unittest();
 
 	//_CrtSetBreakAlloc(191);
-	//bla::defaloc_unittest();
-	
 
 	//_CrtDumpMemoryLeaks(); //这个代码好像会输出额外多余的内存分配信息;
-
-	bla::array_unittest();
+	
+	mptr::mAutoPtr_unittest();
 
 	return 0;
 }
