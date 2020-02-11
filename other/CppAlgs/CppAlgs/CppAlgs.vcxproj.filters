@@ -190,7 +190,7 @@
     <ClCompile Include="..\mLib\mLibTest.cpp">
       <Filter>mLib</Filter>
     </ClCompile>
-    <ClCompile Include="..\mptr\mAutoPtr.cpp">
+    <ClCompile Include="..\mptr\mPtr.cpp">
       <Filter>mptr</Filter>
     </ClCompile>
   </ItemGroup>
@@ -357,7 +357,7 @@
     <ClInclude Include="..\mLib\mLibTest.hpp">
       <Filter>mLib</Filter>
     </ClInclude>
-    <ClInclude Include="..\mptr\mAutoPtr.hpp">
+    <ClInclude Include="..\mptr\mPtr.hpp">
       <Filter>mptr</Filter>
     </ClInclude>
   </ItemGroup>

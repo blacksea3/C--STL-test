@@ -37,7 +37,7 @@
 
 //#include "mLib/mLibTest.hpp"
 
-#include "mptr/mAutoPtr.hpp"
+#include "mptr/mPtr.hpp"
 
 //可以定位到发生内存泄露 所在的文件和具体那一行，用于检测 malloc 分配的内存
 #define _CRTDBG_MAP_ALLOC 
@@ -122,7 +122,9 @@ int main(int argc, const char* argv[])
 
 	//_CrtDumpMemoryLeaks(); //这个代码好像会输出额外多余的内存分配信息;
 	
-	mptr::mAutoPtr_unittest();
+	//mptr::mAutoPtr_unittest();
+	//mptr::mScopedPtr_unittest();
+	mptr::mSharedPtr_unittest();
 
 	return 0;
 }

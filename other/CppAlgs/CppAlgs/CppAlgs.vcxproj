@@ -58,7 +58,7 @@
     <ClCompile Include="..\mLib\mLibTest.cpp" />
     <ClCompile Include="..\mLib\mLibunordered_map.cpp" />
     <ClCompile Include="..\mLib\mLibvector.cpp" />
-    <ClCompile Include="..\mptr\mAutoPtr.cpp" />
+    <ClCompile Include="..\mptr\mPtr.cpp" />
     <ClCompile Include="..\Sort\Sort.cpp" />
     <ClCompile Include="..\String\BWT.cpp" />
     <ClCompile Include="..\String\KMP.cpp" />
@@ -113,7 +113,7 @@
     <ClInclude Include="..\mLib\mLibTest.hpp" />
     <ClInclude Include="..\mLib\mLibunordered_map.hpp" />
     <ClInclude Include="..\mLib\mLibvector.hpp" />
-    <ClInclude Include="..\mptr\mAutoPtr.hpp" />
+    <ClInclude Include="..\mptr\mPtr.hpp" />
     <ClInclude Include="..\public\estimateFuncTime.hpp" />
     <ClInclude Include="..\public\public.hpp" />
     <ClInclude Include="..\Sort\Sort.hpp" />
