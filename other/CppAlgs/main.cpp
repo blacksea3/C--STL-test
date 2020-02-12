@@ -124,7 +124,9 @@ int main(int argc, const char* argv[])
 	
 	//mptr::mAutoPtr_unittest();
 	//mptr::mScopedPtr_unittest();
-	mptr::mSharedPtr_unittest();
+	//mptr::mSharedPtr_unittest();
+
+	mptr::mWeakPtr_unittest();
 
 	return 0;
 }

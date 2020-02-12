@@ -81,7 +81,7 @@ namespace mptr {
 		T& operator*() { return *this->_ptr; };
 
 		//目的obj->member -> obj.operator->()->member
-		T* operator->() { return _ptr; };
+		T* operator->() { return this->_ptr; };
 
 	private:
 		mScopedPtr(const mScopedPtr<T>& map) {};
@@ -136,6 +136,8 @@ namespace mptr {
 		mSharedPtrCount(int c) : _count(c) {};
 		~mSharedPtrCount() {};
 	};
+	template<class T>
+	class mWeakPtr;
 	/*
 	 * 共享使用, 对应C++11及之后的shared_ptr
 	 * 尽管构造函数可以接受nullptr, 内部也不出错, 也没有内存泄漏, 但正常使用的话：
@@ -150,6 +152,8 @@ namespace mptr {
 	template<class T>
 	class mSharedPtr
 	{
+		friend class mWeakPtr<T>;
+
 	protected:
 		T* _ptr;
 		mSharedPtrCount* _pcount;
@@ -173,6 +177,7 @@ namespace mptr {
 				}
 				this->_ptr = map._ptr;
 				this->_pcount = map._pcount;
+				this->_pcount->_count++;
 			}
 			return *this;
 		}
@@ -194,8 +199,46 @@ namespace mptr {
 		T* operator->() { return _ptr; };
 	};
 
+	/*
+	 * 共享使用, 对应C++11及之后的weak_ptr
+	 * 仅仅是拥有一个shared_ptr的引用罢了, 不对计数器进行操作
+	 *
+	 */
+	template<class T>
+	class mWeakPtr
+	{
+	protected:
+		T* _ptr;
+	public:
+		mWeakPtr(T* ptr = nullptr):_ptr(ptr){};
+
+		//拷贝构造
+		mWeakPtr(mSharedPtr<T>& msp) :_ptr(msp._ptr) {};
+		mWeakPtr(mWeakPtr<T>& mwp) :_ptr(mwp._ptr) {};
+
+		//重载复制操作符
+		mWeakPtr<T>& operator=(const mWeakPtr<T>& mwp) {
+			if (this != &mwp) {
+				this->_ptr = mwp._ptr;
+			}
+			return *this;
+		}
+
+		~mWeakPtr() {
+			;
+		};
+
+		//
+		T& operator*() { return *this->_ptr; };
+
+		//
+		T* operator->() { return this->_ptr; };
+	};
+	
+
 	void mAutoPtr_unittest();
 	void mScopedPtr_unittest();
 
 	void mSharedPtr_unittest();
+	void mWeakPtr_unittest();
 }
